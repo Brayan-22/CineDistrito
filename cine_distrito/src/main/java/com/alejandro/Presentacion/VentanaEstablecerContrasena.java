@@ -1,218 +1,154 @@
 package com.alejandro.Presentacion;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+/**
+ * Panel para la ventana de establecer contraseña
+ * @author alejandro
+ * @version 1.0
+ */
+public class VentanaEstablecerContrasena extends JPanel {
 
+	private JTextField txtContraseña;
+	private JTextField txtCodigo;
+	private JButton btnContinue;
+	private JButton btnSalir;
+	private JLabel lblContraseña;
+	private JLabel lblCodigo;
+	/**
+	 * Constructor que inicializa los componentes del panel
+	 */
+	public VentanaEstablecerContrasena() {
 
-	public class VentanaEstablecerContrasena extends JPanel{
+		this.setBounds(0, 0, 700, 700);
+		this.setLayout(null);
 
-		private JPanel pnlPrincipal;
-		private JTextField txtContraseña;
-		private JTextField txtCodigo;
-		private JButton btnContinue;
-		private JButton btnSalir;
-		private String Cine;
-		private String Pelicula;
-		private JLabel lblContraseña;
-		private JLabel lblCodigo;
-		
-		
+		JPanel pnlPrincipal = new JPanel();
+		pnlPrincipal.setBounds(0, 0, 700, 700);
+		pnlPrincipal.setBackground(Color.GRAY);
+		pnlPrincipal.setLayout(null);
+		this.add(pnlPrincipal);
 
-		public VentanaEstablecerContrasena() {
-			
-			this.setBounds(0, 0, 700, 700);
-			this.setLayout(null);
-			
-			JPanel pnlPrincipal = new JPanel();
-			pnlPrincipal.setBounds(0, 0, 700, 700);
-			pnlPrincipal.setBackground(Color.GRAY);
-			pnlPrincipal.setLayout(null);
-			this.add(pnlPrincipal);
-			
-			
-			btnContinue = new JButton();
-			btnContinue.setBounds(280, 520, 134, 54);
-			btnContinue.setContentAreaFilled(false);
-			ImageIcon imagenIngreso = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnContinue.png");
-			btnContinue.setIcon(new ImageIcon(imagenIngreso.getImage().getScaledInstance(btnContinue.getWidth(),
-					btnContinue.getHeight(), Image.SCALE_SMOOTH)));
-			
+		btnContinue = new JButton();
+		btnContinue.setBounds(280, 520, 134, 54);
+		btnContinue.setContentAreaFilled(false);
+		ImageIcon imagenIngreso = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnContinue.png");
+		btnContinue.setIcon(new ImageIcon(imagenIngreso.getImage().getScaledInstance(btnContinue.getWidth(),
+				btnContinue.getHeight(), Image.SCALE_SMOOTH)));
 
-			pnlPrincipal.add(btnContinue);
-			
-			
-			btnSalir = new JButton();
-			btnSalir.setBounds(20, 20, 60, 40);
-			btnSalir.setContentAreaFilled(false);
-			btnSalir.setBorder(BorderFactory.createLineBorder(Color.GREEN, 0, true));
-			ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/exitArrow.png");
+		pnlPrincipal.add(btnContinue);
 
-			btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
-					btnSalir.getHeight(), Image.SCALE_SMOOTH)));
+		btnSalir = new JButton();
+		btnSalir.setBounds(20, 20, 60, 40);
+		btnSalir.setContentAreaFilled(false);
+		btnSalir.setBorder(BorderFactory.createLineBorder(Color.GREEN, 0, true));
+		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/exitArrow.png");
 
-			pnlPrincipal.add(btnSalir);
-			
-			
-			lblContraseña = new JLabel();
-			lblContraseña.setText("Establecer Contraseña");
-			lblContraseña.setBounds(130, 40, 500, 100);
-			lblContraseña.setFont(new Font("Comic Sans MS", Font.BOLD, 44));
-			
-			pnlPrincipal.add(lblContraseña);
-			
-			JPanel pnlCodigo = new JPanel();
-			// pnlNombre.setBackground(Color.DARK_GRAY);
-			pnlCodigo.setLayout(null);
-			pnlCodigo.setBounds(150, 190, 400, 130); // Estaba en (50, 350, 600,130)
-			pnlCodigo.setOpaque(false);
-			pnlCodigo.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
+		btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
+				btnSalir.getHeight(), Image.SCALE_SMOOTH)));
 
-			lblCodigo = new JLabel();
-			lblCodigo.setBounds(120, 20, 280, 30);
-			lblCodigo.setText("Código Empleado");
-			lblCodigo.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
+		pnlPrincipal.add(btnSalir);
 
-			pnlCodigo.add(lblCodigo);
+		lblContraseña = new JLabel();
+		lblContraseña.setText("Establecer Contraseña");
+		lblContraseña.setBounds(130, 40, 500, 100);
+		lblContraseña.setFont(new Font("Comic Sans MS", Font.BOLD, 44));
 
-			
-			
-			txtCodigo = new JTextField();
-			txtCodigo.setBounds(100, 75, 200, 30);
-			txtCodigo.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
-			
-			
-			
-			
+		pnlPrincipal.add(lblContraseña);
 
-			pnlCodigo.add(txtCodigo);
+		JPanel pnlCodigo = new JPanel();
+		pnlCodigo.setLayout(null);
+		pnlCodigo.setBounds(150, 190, 400, 130); 
+		pnlCodigo.setOpaque(false);
+		pnlCodigo.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
 
-			pnlPrincipal.add(pnlCodigo);
-			
-			JPanel pnlContraseña = new JPanel();
-			// pnlContraseña.setBackground(Color.GRAY);
-			pnlContraseña.setLayout(null);
-			pnlContraseña.setBounds(150, 350, 400, 130);
-			pnlContraseña.setOpaque(false);
-			pnlContraseña.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
+		lblCodigo = new JLabel();
+		lblCodigo.setBounds(120, 20, 280, 30);
+		lblCodigo.setText("Código Empleado");
+		lblCodigo.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 
-			lblContraseña = new JLabel();
-			lblContraseña.setBounds(110, 20, 200, 30);
-			lblContraseña.setText("Nueva Contraseña");
-			lblContraseña.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
+		pnlCodigo.add(lblCodigo);
 
-			pnlContraseña.add(lblContraseña);
+		txtCodigo = new JTextField();
+		txtCodigo.setBounds(100, 75, 200, 30);
+		txtCodigo.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 
-			txtContraseña = new JTextField();
-			txtContraseña.setBounds(100, 75, 200, 30);
-			txtContraseña.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
+		pnlCodigo.add(txtCodigo);
 
-			pnlContraseña.add(txtContraseña);
-			
-			
+		pnlPrincipal.add(pnlCodigo);
 
-			pnlPrincipal.add(pnlContraseña);
-			
-		}
+		JPanel pnlContraseña = new JPanel();
+		pnlContraseña.setLayout(null);
+		pnlContraseña.setBounds(150, 350, 400, 130);
+		pnlContraseña.setOpaque(false);
+		pnlContraseña.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
 
+		lblContraseña = new JLabel();
+		lblContraseña.setBounds(110, 20, 200, 30);
+		lblContraseña.setText("Nueva Contraseña");
+		lblContraseña.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 
+		pnlContraseña.add(lblContraseña);
 
-		public JButton getBtnContinue() {
-			return btnContinue;
-		}
+		txtContraseña = new JTextField();
+		txtContraseña.setBounds(100, 75, 200, 30);
+		txtContraseña.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 
+		pnlContraseña.add(txtContraseña);
 
+		pnlPrincipal.add(pnlContraseña);
 
-		public JButton getBtnSalir() {
-			return btnSalir;
-		}
+	}
 
+	/**
+	 * getter boton continuar
+	 * @return JButton
+	 */
+	public JButton getBtnContinue() {
+		return btnContinue;
+	}
+	/**
+	 * getter boton salir
+	 * @return JButton
+	 */
+	public JButton getBtnSalir() {
+		return btnSalir;
+	}
+	/**
+	 * getter campo de texto de la contraseña
+	 * @return JTextField
+	 */
+	public JTextField getFTxtContraseña() {
+		return txtContraseña;
+	}
+	/**
+	 * getter campo de texto del codigo
+	 * @return JTextField
+	 */
+	public JTextField getFTxtCodigo() {
+		return txtCodigo;
+	}
+	/**
+	 * getter texto del campo de la contraseña
+	 * @return String
+	 */
+	public String getTxtContraseña() {
+		return txtContraseña.getText();
+	}
+	/**
+	 * getter texto del campo del codigo
+	 * @return String
+	 */
+	public String getTxtCodigo() {
+		return txtCodigo.getText();
+	}
 
-
-		public JTextField getFTxtContraseña() {
-			return txtContraseña;
-		}
-
-
-
-		public JTextField getFTxtCodigo() {
-			return txtCodigo;
-		}
-		
-		public String getTxtContraseña() {
-			return txtContraseña.getText();
-		}
-		
-		public String getTxtCodigo() {
-			return txtCodigo.getText();
-		}
-		
-
-		
-
-/*
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			if (e.getSource()==btnIngreso) {
-				
-				
-				if(txtCodigo.getText().isEmpty() || txtContraseña.getText().isEmpty()) {
-					
-					JOptionPane.showMessageDialog(null, "Porfavor ingrese todos los campos");
-					
-					
-				}else {
-						System.out.println("Verificando en Base de datos...");
-						Verificar.estaEnBaseDeDatos();
-				}
-				
-				
-						//deberia estar la comparacion de si existe en la base de Datos
-//					}else {
-//					
-//						JOptionPane.showMessageDialog(null, "Formato inválido, ingrese los datos nuevamente", "Error de Formato", JOptionPane.WARNING_MESSAGE);
-//						txtCodigo.setText("");
-//						txtContraseña.setText("");
-//					}
-				
-				
-			
-				
-
-				
-			}
-			else if(e.getSource()==btnSalir) {
-				
-		
-			
-					
-					VentanaAdmin va = new VentanaAdmin();
-					this.setVisible(false);
-					va.setVisible(true);
-					
-				
-				
-				
-			}
-			
-		}
-
-		
-
-
-		
-		*/
-		
-	
 }
-

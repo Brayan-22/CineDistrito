@@ -6,13 +6,18 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author USER
+ * Implementacion producto concreto Delete Cliente
+ * @author alejandro
+ * @version 1.0
  */
 public class DeleteCliente implements Delete{
     singletonConexion conexion;
     private PreparedStatement pst;
     private final int idcliente;
+    /**
+     * Constructor Delete cliente
+     * @param idcliente define el id del cliente a eliminar
+     */
     public DeleteCliente(int idcliente) {
         this.idcliente=idcliente;
     }

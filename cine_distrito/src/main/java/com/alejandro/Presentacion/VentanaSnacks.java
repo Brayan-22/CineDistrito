@@ -4,17 +4,12 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
@@ -22,6 +17,11 @@ import javax.swing.JToggleButton;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 
+/**
+ * Panel para la ventana de snacks
+ * @author alejandro
+ * @version 1.0
+ */
 public class VentanaSnacks extends JPanel {
 
 	private JPanel pnlPrincipal;
@@ -46,6 +46,9 @@ public class VentanaSnacks extends JPanel {
 	private String Pelicula;
 	private String Cine;
 
+	/**
+	 * Constructor que inicializa los componentes del panel
+	 */
 	public VentanaSnacks() {
 
 		this.setBounds(0, 0, 700, 700);
@@ -93,17 +96,15 @@ public class VentanaSnacks extends JPanel {
 		// Se crea el label que dice "Peliculas en cartelera"
 
 		pnlCombos = new JPanel();
-//
+		//
 		pnlCombos.setBounds(10, 30, 580, 420);
 		pnlCombos.setPreferredSize(new Dimension(370, 1050));
 		pnlCombos.setLayout(null);
 		pnlCombos.setBackground(Color.GRAY);
-		// pnlPeliculas.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
 		pnlSnacks.add(pnlCombos);
 
 		JScrollPane Scroll = new JScrollPane(pnlCombos);
 
-		// Es importante que tenga el mismo posicionamiento
 		Scroll.setBounds(5, 30, 585, 420);
 		Scroll.setViewportView(pnlCombos);
 		pnlSnacks.add(Scroll);
@@ -164,14 +165,14 @@ public class VentanaSnacks extends JPanel {
 		spnCombo2.setEnabled(false);
 
 		pnlCombos.add(spnCombo2);
-		
+
 		JLabel DescCombo2 = new JLabel();
 		DescCombo2.setFont((new Font("Comic Sans MS", 0, 16)));
-		DescCombo2.setText("<html><body>1 Crispeta de sal 120 g + 1 perro caliente + 1 Gaseosa 640 ml + 1 Kit Kat 41 g");
+		DescCombo2
+				.setText("<html><body>1 Crispeta de sal 120 g + 1 perro caliente + 1 Gaseosa 640 ml + 1 Kit Kat 41 g");
 		DescCombo2.setOpaque(false);
 		DescCombo2.setBounds(200, 310, 350, 90);
 		pnlCombos.add(DescCombo2);
-
 
 		/////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -197,7 +198,7 @@ public class VentanaSnacks extends JPanel {
 		spnCombo3.setEnabled(false);
 
 		pnlCombos.add(spnCombo3);
-		
+
 		JLabel DescCombo3 = new JLabel();
 		DescCombo3.setFont((new Font("Comic Sans MS", 0, 16)));
 		DescCombo3.setText("<html><body>1 Caja crispetas de sal 55 g + 1 Gaseosa 640 ml + 1 chocolatina Jet 30g");
@@ -229,7 +230,7 @@ public class VentanaSnacks extends JPanel {
 		spnCombo4.setEnabled(false);
 
 		pnlCombos.add(spnCombo4);
-		
+
 		JLabel DescCombo4 = new JLabel();
 		DescCombo4.setFont((new Font("Comic Sans MS", 0, 16)));
 		DescCombo4.setText("<html><body>1 Crispeta de sal 150 g + 2 Gaseosas 640 ml");
@@ -237,66 +238,108 @@ public class VentanaSnacks extends JPanel {
 		DescCombo4.setBounds(200, 830, 350, 90);
 		pnlCombos.add(DescCombo4);
 
-
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	}
 
+	/**
+	 * getter boton salir
+	 * @return JButton
+	 */
 	public JButton getBtnSalir() {
 		return btnSalir;
 	}
-
+	/**
+	 * getter spinner combo1
+	 * @return JSpinner
+	 */
 	public JSpinner getSpnCombo1() {
 		return spnCombo1;
 	}
-
+	/**
+	 * getter togglebutton combo1
+	 * @return JToggleButton
+	 */
 	public JToggleButton getTbtnImgCombo1() {
 		return tbtnImgCombo1;
 	}
-
+	/**
+	 * getter spinner combo2
+	 * @return JSpinner
+	 */
 	public JSpinner getSpnCombo2() {
 		return spnCombo2;
 	}
-
+	/**
+	 * getter togglebutton combo2
+	 * @return JToggleButton
+	 */
 	public JToggleButton getTbtnImgCombo2() {
 		return tbtnImgCombo2;
 	}
-
+	/**
+	 * getter spinner combo3
+	 * @return JSpinner
+	 */
 	public JSpinner getSpnCombo3() {
 		return spnCombo3;
 	}
-
+	/**
+	 * getter togglebutton combo3
+	 * @return JToggleButton
+	 */
 	public JToggleButton getTbtnImgCombo3() {
 		return tbtnImgCombo3;
 	}
-
+	/**
+	 * getter spinner combo4
+	 * @return JSpinner
+	 */
 	public JSpinner getSpnCombo4() {
 		return spnCombo4;
 	}
-
+	/**
+	 * getter toggleButton combo4
+	 * @return JToggleButton 
+	 */
 	public JToggleButton getTbtnImgCombo4() {
 		return tbtnImgCombo4;
 	}
-
+	/**
+	 * getter boton continuar 
+	 * @return JButton
+	 */
 	public JButton getBtnContinue() {
 		return btnContinuar;
 	}
-
+	/**
+	 * getter cantidad combo1
+	 * @return int
+	 */
 	public int getIntSpnComb1() {
 
 		return (Integer) spnCombo1.getValue();
 	}
-
+	/**
+	 * getter cantidad combo2
+	 * @return int
+	 */
 	public int getIntSpnComb2() {
 
 		return (Integer) spnCombo2.getValue();
 	}
-
+	/**
+	 * getter cantidad combo3
+	 * @return int
+	 */
 	public int getIntSpnComb3() {
 
 		return (Integer) spnCombo3.getValue();
 	}
-
+	/**
+	 * getter cantidad combo4
+	 * @return int
+	 */
 	public int getIntSpnComb4() {
 
 		return (Integer) spnCombo4.getValue();

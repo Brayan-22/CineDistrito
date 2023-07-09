@@ -3,8 +3,9 @@ package com.alejandro.Logica.AbstractFactory;
 import com.alejandro.Logica.CRUD.*;
 
 /**
- *
- * @author USER
+ * Fabrica concreta para el CRUD de Clientes
+ * @author alejandro
+ * @version 1.0
  */
 public class FabricaCliente implements AbstractFactoryCRUD{
     private int idcliente;
@@ -46,21 +47,35 @@ public class FabricaCliente implements AbstractFactoryCRUD{
     }
     
     
+    
+    /** 
+     * @return Create
+     * retorna un objeto CreateCliente
+     */
     @Override
     public Create crearRegistro() {
         return new CreateCliente(idcliente, nombre, apellidos, contraseña, correo);
     }
-
+    /** 
+     * @return Delete
+     * retorna un objeto DeleteCliente
+     */
     @Override
     public Delete deleteRegistro() {
         return new DeleteCliente(idcliente);
     }
-
+    /** 
+     * @return Read
+     * retorna un objeto ReadCliente
+     */
     @Override
     public Read readRegistro() {
         return new ReadCliente(correo);
     }
-
+    /** 
+     * @return Update
+     * retorna un objeto UpdateCliente
+     */
     @Override
     public Update updateRegistro() {
         return new UpdateCliente();

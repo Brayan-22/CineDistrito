@@ -3,23 +3,21 @@ package com.alejandro.Presentacion;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
-
+/**
+ * Panel para la ventana de registro de usuarios
+ * @author alejandro
+ * @version 1.0
+ */
 public class VentanaRegistroUsuario extends JPanel {
 
 	private JButton btnSalir;
@@ -36,13 +34,14 @@ public class VentanaRegistroUsuario extends JPanel {
 	private JLabel lblIngresoUsuario;
 	private JTextField txtApellido;
 
-
+	/**
+	 * Constructor que inicializa los componentes del panel
+	 */
 	public VentanaRegistroUsuario() {
-
 
 		this.setBounds(0, 0, 700, 700);
 		this.setLayout(null);
-		
+
 		JPanel pnlPrincipal = new JPanel();
 		pnlPrincipal.setBounds(0, 0, 700, 700);
 		pnlPrincipal.setBackground(Color.GRAY);
@@ -77,7 +76,6 @@ public class VentanaRegistroUsuario extends JPanel {
 				btnIngreso.getHeight(), Image.SCALE_SMOOTH)));
 
 		pnlPrincipal.add(btnIngreso);
-		
 
 		JLabel lblNombre = new JLabel();
 		lblNombre.setText("Nombre: ");
@@ -129,7 +127,6 @@ public class VentanaRegistroUsuario extends JPanel {
 		lblContraseña.setBounds(400, 310, 150, 30);
 		lblContraseña.setFont(new Font("Comic Sans MS", Font.ITALIC, 16));
 
-		//pnlPrincipal.add(lblContraseña);
 
 		txtContraseña = new JTextField();
 		txtContraseña.setBounds(400, 440, 200, 30);
@@ -156,9 +153,9 @@ public class VentanaRegistroUsuario extends JPanel {
 		lblMultiplex.setText("Multiplex:  ");
 		lblMultiplex.setBounds(120, 310, 190, 30);
 		lblMultiplex.setFont(new Font("Comic Sans MS", Font.ITALIC, 16));
-		
+
 		pnlPrincipal.add(lblMultiplex);
-		
+
 		cmbMultiplex = new JComboBox<>();
 		cmbMultiplex.addItem("Titan");
 		cmbMultiplex.addItem("Unicentro");
@@ -172,7 +169,7 @@ public class VentanaRegistroUsuario extends JPanel {
 		pnlPrincipal.add(cmbMultiplex);
 
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		
+
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		JLabel lblCargo = new JLabel();
@@ -192,237 +189,167 @@ public class VentanaRegistroUsuario extends JPanel {
 		cmbCargo.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 
 		pnlPrincipal.add(cmbCargo);
-		
+
 		JLabel lblRol = new JLabel();
 		lblRol.setText("Contraseña: ");
 		lblRol.setBounds(400, 410, 190, 30);
 		lblRol.setFont(new Font("Comic Sans MS", Font.ITALIC, 16));
-		
+
 		pnlPrincipal.add(lblRol);
-		
-                JLabel lblApellido = new JLabel();
-                lblApellido.setText("Apellido: ");
-                lblApellido.setBounds(400, 110, 190, 30);
-                lblApellido.setFont(new Font("Comic Sans MS", Font.ITALIC, 16));
-                pnlPrincipal.add(lblApellido);
-                
-                txtApellido=new JTextField();
-                txtApellido.setBounds(400, 140, 200, 30);
-                txtApellido.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
-                pnlPrincipal.add(txtApellido);
-                
+
+		JLabel lblApellido = new JLabel();
+		lblApellido.setText("Apellido: ");
+		lblApellido.setBounds(400, 110, 190, 30);
+		lblApellido.setFont(new Font("Comic Sans MS", Font.ITALIC, 16));
+		pnlPrincipal.add(lblApellido);
+
+		txtApellido = new JTextField();
+		txtApellido.setBounds(400, 140, 200, 30);
+		txtApellido.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
+		pnlPrincipal.add(txtApellido);
+
 	}
 
-
+	/**
+	 * getter boton salir
+	 * @return JButton
+	 */
 	public JButton getBtnSalir() {
 		return btnSalir;
 	}
-
-
+	/**
+	 * getter campo de texto nombre
+	 * @return JTextField
+	 */
 	public JTextField getFTxtNombre() {
 		return txtNombre;
 	}
-	
+	/**
+	 * getter texto del campo de texto nombre
+	 * @return String
+	 */
 	public String getTxtNombre() {
 		return txtNombre.getText();
 	}
-
-
+	/**
+	 * getter campo de texto telefono
+	 * @return JTextField
+	 */
 	public JTextField getFTxtTelefono() {
 		return txtTelefono;
 	}
-	
+	/**
+	 * getter texto del campo de texto del telefono
+	 * @return String
+	 */
 	public String getTxtTelefono() {
 		return txtTelefono.getText();
 	}
-
-
+	/**
+	 * getter texto del campo de texto del correo
+	 * @return String
+	 */
 	public String getTxtCorreo() {
 		return txtCorreo.getText();
 	}
-	
+	/**
+	 * getter campo de texto correo
+	 * @return JTextField
+	 */
 	public JTextField getFTxtCorreo() {
 		return txtCorreo;
 	}
-
-
+	/**
+	 * getter texto del campo de texto de contraseña 
+	 * @return String
+	 */
 	public String getTxtContraseña() {
 		return txtContraseña.getText();
 	}
-	
+	/**
+	 * getter campo de texto contraseña
+	 * @return JTextField
+	 */
 	public JTextField getFTxtContraseña() {
 		return txtContraseña;
 	}
-
-
+	/**
+	 * getter campo de texto documento
+	 * @return JTextField
+	 */
 	public JTextField getFTxtDocumento() {
 		return txtDocumento;
 	}
-	
+	/**
+	 * getter texto del campo de texto documento
+	 * @return String
+	 */
 	public String getTxtDocumento() {
 		return txtDocumento.getText();
 	}
-
-
+	/**
+	 * getter combo box multiplex
+	 * @return JComboBox<String>
+	 */
 	public JComboBox<String> getCmbMultiplex() {
 		return cmbMultiplex;
 	}
-
-
+	/**
+	 * getter combo box cargos
+	 * @return JComboBox<String>
+	 */
 	public JComboBox<String> getCmbCargo() {
 		return cmbCargo;
 	}
-
-
+	/**
+	 * getter combo box roles
+	 * @return JComboBox<String>
+	 */
 	public JComboBox<String> getCmbRol() {
 		return cmbRol;
 	}
-
-
+	/**
+	 * getter check box autorizacion 
+	 * @return JCheckBox 
+	 */
 	public JCheckBox getCbxAutorizacion() {
 		return cbxAutorizacion;
 	}
-
-
+	/**
+	 * getter boton ingresar
+	 * @return JButton
+	 */
 	public JButton getBtnIngreso() {
 		return btnIngreso;
 	}
-	
-	public String getSelectedMultiplex() {
-		
-		return (String)cmbMultiplex.getSelectedItem();
-	}
-        
-        public JTextField getFTxtApellido() {
-            return txtApellido;
-        }
-        
-        public String getTxtApellido(){
-            return txtApellido.getText();
-        }
-        public void setTxtApellido(JTextField txtApellido) {
-            this.txtApellido = txtApellido;
-        }
-
-
-	/*
-	 * Método que devuelve el código del empleado una vez que se registra (Se debe
-	 * guardar en la base de datos)
-	 * 
-	 * @param Nombre Recibe el nombre del empleado a registrar
-	 * 
-	 * @param Apellido recibe el apellido del empleado a registrar
-	 * 
-	 * @param Documento Recibe el documento del empleado a registrar
-	 * 
-	 * @return retorno El código generado para el empleado
+	/**
+	 * getter multiplex seleccionado
+	 * @return String
 	 */
+	public String getSelectedMultiplex() {
 
-	//Cargo o Multiplex
-
-	/*
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == cbxAutorizacion) {
-
-			if (!cbxAutorizacion.isSelected()) {
-
-				btnIngreso.setEnabled(false);
-
-			} else {
-				btnIngreso.setEnabled(true);
-			}
-
-		} else if (e.getSource() == btnIngreso) {
-
-			if (!Verificar.isNumeric(txtDocumento.getText())) {
-
-				JOptionPane.showMessageDialog(null, "Ingrese un número de documento válido");
-				txtDocumento.setText("");
-
-			}
-
-			if (!Verificar.esCorreo(txtCorreo.getText())) {
-
-				JOptionPane.showMessageDialog(null, "Ingrese un formato de correo válido");
-				txtCorreo.setText("");
-
-			}
-
-			if (txtTelefono.getText().isEmpty() || txtNombre.getText().isEmpty() || txtContraseña.getText().isEmpty()
-					|| txtCorreo.getText().isEmpty() || txtDocumento.getText().isEmpty()) {
-
-				JOptionPane.showMessageDialog(null, "Porfavor no deje espacios en blanco");
-				btnIngreso.setEnabled(false);
-				cbxAutorizacion.setSelected(false);
-
-			} else {
-
-				btnIngreso.setEnabled(true);
-
-			}
-
-			System.out.println("Codigo de empleado generado: "
-					+ crearCodigo(txtNombre.getText(), (String)cmbMultiplex.getSelectedItem() , txtDocumento.getText()));
-
-		} else if (e.getSource() == btnSalir) {
-
-		
-
-				VentanaAdmin va = new VentanaAdmin();
-				this.setVisible(false);
-				va.setVisible(true);
-
-			
-
-		}
-
+		return (String) cmbMultiplex.getSelectedItem();
 	}
-
-	@Override
-	public void keyTyped(KeyEvent evt) {
-		if (evt.getSource() == txtDocumento) {
-
-			char c = evt.getKeyChar();
-
-			if (c < '0' || c > '9')
-				evt.consume();
-
-		} else if (evt.getSource() == txtNombre) {
-
-			char c = evt.getKeyChar();
-
-			if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z') && (c != ' '))
-				evt.consume();
-
-		} else if (evt.getSource() == txtTelefono) {
-
-			char c = evt.getKeyChar();
-
-			if (c < '0' || c > '9')
-				evt.consume();
-			
-		}
-
+	/**
+	 * getter campo de texto apellidos
+	 * @return JTextField
+	 */
+	public JTextField getFTxtApellido() {
+		return txtApellido;
 	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
-
+	/**
+	 * getter texto del campo de texto de apellidos
+	 * @return String
+	 */
+	public String getTxtApellido() {
+		return txtApellido.getText();
 	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-
+	/**
+	 * setter campo de texto apellidos
+	 * @param txtApellido JTextField
+	 */
+	public void setTxtApellido(JTextField txtApellido) {
+		this.txtApellido = txtApellido;
 	}
-	*/
-
-
 
 }
-
-
-

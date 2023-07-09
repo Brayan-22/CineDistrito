@@ -4,30 +4,31 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.ScrollPaneConstants;
 
+/**
+ * Panel para la ventana de cartelera
+ * @author alejandro
+ * @version 1.0
+ */
 public class VentanaCartelera extends JPanel{
 
-	private JPanel pnlCartelera;
 	private JButton btnSalir;
-	private JPanel pnlPeliculas;
 	private JButton peliculaEncanto;
 	private JButton peliculaMoonfall;
 	private JButton peliculaPaseo6;
 	private JButton peliculaScream;
 	private JButton peliculaSpiderman;
 	String movieName ="";
-
+	/**
+	 * Constructor que inicializa los componentes del panel
+	 */
 	public VentanaCartelera() {
 
 		this.setBounds(0, 0, 700, 700);
@@ -43,7 +44,7 @@ public class VentanaCartelera extends JPanel{
 		btnSalir.setBounds(20, 20, 60, 40);
 		btnSalir.setContentAreaFilled(false);
 		btnSalir.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
-		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/exitArrow.png");
+		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/exitArrow.png");
 
 		btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
 				btnSalir.getHeight(), Image.SCALE_SMOOTH)));
@@ -72,7 +73,6 @@ public class VentanaCartelera extends JPanel{
 		pnlPeliculas.setPreferredSize(new Dimension (1050, 370));
 		pnlPeliculas.setLayout(null);
 		pnlPeliculas.setBackground(Color.GRAY);
-		//pnlPeliculas.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
 		pnlCartelera.add(pnlPeliculas);
 
 		JScrollPane Scroll = new JScrollPane(pnlPeliculas);
@@ -86,7 +86,7 @@ public class VentanaCartelera extends JPanel{
 		peliculaEncanto = new JButton();
 		peliculaEncanto.setBounds(50, 10, 150, 225);
 		peliculaEncanto.setContentAreaFilled(false);
-		ImageIcon imagenEncanto = new ImageIcon("cine_distrito/src/main/resources/Encanto.jpg");
+		ImageIcon imagenEncanto = new ImageIcon("cine_distrito/src/main/resources/img/Encanto.jpg");
 
 		peliculaEncanto.setIcon(new ImageIcon(imagenEncanto.getImage().getScaledInstance(peliculaEncanto.getWidth(),
 				peliculaEncanto.getHeight(), Image.SCALE_SMOOTH)));
@@ -176,26 +176,46 @@ public class VentanaCartelera extends JPanel{
 	}
 	
 	
+	
+	/** 
+	 * getter boton salir
+	 * @return JButton
+	 */
 	public JButton getBtnSalir() {
 		return btnSalir;
 	}
-	
+	/**
+	 * getter boton peliculaEncanto
+	 * @return JButton
+	 */
 	public JButton getBtnPeliculaEncanto() {
 		return peliculaEncanto;
 	}
-	
+	/**
+	 * getter boton peliculaMoonfall
+	 * @return Jbutton
+	 */
 	public JButton getBtnPeliculaMoonfall() {
 		return peliculaMoonfall;
 	}
-	
+	/**
+	 * getter boton peliculaPaseo6
+	 * @return JButton
+	 */
 	public JButton getBtnPeliculaPaseo6() {
 		return peliculaPaseo6;
 	}
-	
+	/**
+	 * getter boton peliculaScream
+	 * @return JButton
+	 */
 	public JButton getBtnPeliculaScream() {
 		return peliculaScream;
 	}
-	
+	/**
+	 * getter boton peliculaSpiderman
+	 * @return JButton
+	 */
 	public JButton getBtnPeliculaSpiderman() {
 		return peliculaSpiderman;
 	}

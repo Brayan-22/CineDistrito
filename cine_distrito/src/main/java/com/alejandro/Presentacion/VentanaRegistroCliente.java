@@ -3,24 +3,23 @@ package com.alejandro.Presentacion;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-
-public class VentanaRegistroCliente extends JPanel{
+/**
+ * Panel para la ventana de registro de cliente
+ * @author alejandro
+ * @version 1.0
+ */
+public class VentanaRegistroCliente extends JPanel {
 
 	private JPanel pnlPrincipal;
 	private JButton btnSalir;
@@ -37,8 +36,11 @@ public class VentanaRegistroCliente extends JPanel{
 	private String Cine;
 	private String Pelicula;
 
+	/**
+	 * Constructor que inicializa los componentes del panel
+	 */
 	public VentanaRegistroCliente() {
-		
+
 		this.setBounds(0, 0, 700, 700);
 		this.setLayout(null);
 
@@ -171,171 +173,80 @@ public class VentanaRegistroCliente extends JPanel{
 				+ "y manejo de información.</html>");
 		pnlPrincipal.add(cbxAutorizacion);
 
-	
-
 	}
 
+	/**
+	 * metodo para cambiar datos 
+	 * @param Pelicula String
+	 * @param Cine String
+	 */
 	public void enviarDatos(String Pelicula, String Cine) {
 
 		this.Cine = Cine;
 		this.Pelicula = Pelicula;
 
 	}
-
+	/**
+	 * getter boton salir
+	 * @return JButton
+	 */
 	public JButton getBtnSalir() {
 		return btnSalir;
 	}
-
+	/**
+	 * getter campo texto nombre
+	 * @return JTextField
+	 */
 	public JTextField getTxtNombre() {
 		return txtNombre;
 	}
-
+	/**
+	 * getter campo texto apellido
+	 * @return JTextField
+	 */
 	public JTextField getTxtApellido() {
 		return txtApellido;
 	}
-
+	/**
+	 * getter campo de texto correo
+	 * @return JTextField
+	 */
 	public JTextField getTxtCorreo() {
 		return txtCorreo;
 	}
-
+	/**
+	 * getter campo de texto contraseña
+	 * @return JTextField
+	 */
 	public JTextField getTxtContraseña() {
 		return txtContraseña;
 	}
-
+	/**
+	 * getter campo de texto documento
+	 * @return JTextField
+	 */
 	public JTextField getTxtDocumento() {
 		return txtDocumento;
 	}
-
+	/**
+	 * getter combo box documentos
+	 * @return JComboBox<String>
+	 */
 	public JComboBox<String> getCmbDocumento() {
 		return cmbDocumento;
 	}
-
+	/**
+	 * getter check box autorizacion 
+	 * @return JCheckBox
+	 */
 	public JCheckBox getCbxAutorizacion() {
 		return cbxAutorizacion;
 	}
-
+	/**
+	 * getter boton ingresas
+	 * @return JButton
+	 */
 	public JButton getBtnIngreso() {
 		return btnIngreso;
 	}
-
-
-	
-
-	/*
-	 * Método que devuelve el código del empleado una vez que se registra (Se debe
-	 * guardar en la base de datos)
-	 * 
-	 * @param Nombre Recibe el nombre del empleado a registrar
-	 * 
-	 * @param Apellido recibe el apellido del empleado a registrar
-	 * 
-	 * @param Documento Recibe el documento del empleado a registrar
-	 * 
-	 * @return retorno El código generado para el empleado
-	 */
-
-	
-
-
-	/*
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == cbxAutorizacion) {
-
-			if (!cbxAutorizacion.isSelected()) {
-
-				btnIngreso.setEnabled(false);
-
-			} else {
-				btnIngreso.setEnabled(true);
-			}
-
-		} else if (e.getSource() == btnIngreso) {
-
-			if (!Verificar.isNumeric(txtDocumento.getText())) {
-
-				JOptionPane.showMessageDialog(null, "Ingrese un número de documento válido");
-				txtDocumento.setText("");
-
-			}
-
-			if (!Verificar.esCorreo(txtCorreo.getText())) {
-
-				JOptionPane.showMessageDialog(null, "Ingrese un formato de correo válido");
-				txtCorreo.setText("");
-
-			}
-
-			if (txtApellido.getText().isEmpty() || txtNombre.getText().isEmpty() || txtContraseña.getText().isEmpty()
-					|| txtCorreo.getText().isEmpty() || txtDocumento.getText().isEmpty()) {
-
-				JOptionPane.showMessageDialog(null, "Porfavor no deje espacios en blanco");
-				btnIngreso.setEnabled(false);
-				cbxAutorizacion.setSelected(false);
-
-			} else {
-
-				btnIngreso.setEnabled(true);
-
-			}
-
-			System.out.println("Codigo de empleado generado: "
-					+ crearCodigo(txtNombre.getText(), txtApellido.getText(), txtDocumento.getText()));
-
-		} else if (e.getSource() == btnSalir) {
-
-		
-
-				VentanaIngresoCliente viu = new VentanaIngresoCliente(Cine, Pelicula);
-				this.dispose();
-				viu.setVisible(true);
-
-			
-
-		}
-
-	}
-
-*/
-
-	/*
-	@Override
-	public void keyTyped(KeyEvent evt) {
-		if (evt.getSource() == txtDocumento) {
-
-			char c = evt.getKeyChar();
-
-			if (c < '0' || c > '9')
-				evt.consume();
-
-		} else if (evt.getSource() == txtNombre) {
-
-			char c = evt.getKeyChar();
-
-			if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z') && (c != ' '))
-				evt.consume();
-
-		} else if (evt.getSource() == txtApellido) {
-
-			char c = evt.getKeyChar();
-
-			if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z') && (c != ' '))
-				evt.consume();
-
-		}
-
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-
-	}*/
-
 }

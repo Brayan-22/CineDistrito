@@ -7,14 +7,17 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author USER
+ * Implementacion producto concreto Delete Empleado 
+ * @author alejandro
  */
 public class DeleteEmpleado implements Delete{
     singletonConexion conexion;
     private final String codigoempleado;
     private PreparedStatement pst;
-    
+    /**
+     * Constructor DeleteEmpleado
+     * @param codigoempleado define el codigo del empleado a eliminar
+     */
     public DeleteEmpleado(String codigoempleado) {
         this.codigoempleado = codigoempleado;
     }

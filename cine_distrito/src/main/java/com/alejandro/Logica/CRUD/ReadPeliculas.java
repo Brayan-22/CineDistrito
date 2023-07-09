@@ -8,8 +8,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 /**
- *
- * @author USER
+ * Implementacion producto concreto Read peliculas
+ * @author alejandro
+ * @version 1.0
  */
 public class ReadPeliculas implements Read{
     singletonConexion conexion;
@@ -18,6 +19,10 @@ public class ReadPeliculas implements Read{
     private ResultSet rs;
     
     
+    
+    /** 
+     * @return ArrayList
+     */
     @Override
     public ArrayList operacionCrud() {
         String sql="select* from pelicula";

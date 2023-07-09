@@ -6,8 +6,9 @@ import java.sql.*;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author USER
+ * Implementacion producto concreto Create Empleados
+ * @author alejandro
+ * @version 1.0
  */
 public class CreateEmpleado implements Create{
     
@@ -24,6 +25,17 @@ public class CreateEmpleado implements Create{
     private PreparedStatement pst;
     private String sql="insert into empleado(idempleado,nombre,apellidos,contraseña,telefono,fecha_inin_cargo,id_tipo_cargo,id_multiplex,codigoempleado) values(?,?,?,?,?,?,?,?,?)";
     
+    /**
+     * Constructor para crear un nuevo empleado en la base de datos
+     * @param idempleado define el id del empleado nuevo
+     * @param nombre define el nombre del empleado nuevo
+     * @param apellidos define los apellidos del empleado nuevo
+     * @param contraseña define la contraseña del empleado nuevo
+     * @param telefono define el telefono del empleado nuevo
+     * @param fecha_inin_cargo define la fecha de inicio del cargo de trabajo del empleado nuevo
+     * @param id_tipo_cargo define el id del tipo de cargo del empleado nuevo
+     * @param id_multiplex define el id del multiplex en el cual trabajara el empleado nuevo
+     */
     public CreateEmpleado(int idempleado,String nombre,String apellidos,String contraseña,String telefono,String fecha_inin_cargo,int id_tipo_cargo,int id_multiplex) {
         this.idempleado=idempleado;
         this.nombre=nombre;
@@ -34,7 +46,6 @@ public class CreateEmpleado implements Create{
         this.id_tipo_cargo=id_tipo_cargo;
         this.id_multiplex=id_multiplex;
         this.codigoEmpleado=nombre.substring(0, 4)+multiplex(id_multiplex)+String.valueOf(idempleado).substring(0, 5);
-        System.out.println();
 
     }
     @Override
@@ -58,6 +69,7 @@ public class CreateEmpleado implements Create{
             JOptionPane.showMessageDialog(null, "La cedula que ingreso ya existe con otro empleado");
         }
     }
+    
     private String multiplex(int multi){
         switch (multi) {
             case 1:

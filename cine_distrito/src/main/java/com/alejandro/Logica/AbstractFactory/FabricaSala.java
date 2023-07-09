@@ -1,9 +1,10 @@
 package com.alejandro.Logica.AbstractFactory;
 
 import com.alejandro.Logica.CRUD.*;
-/**
- *
- * @author USER
+/** 
+ * Fabrica concreta para el CRUD de Salas
+ * @author alejandro
+ * @version 1.0
  */
 public class FabricaSala implements AbstractFactoryCRUD{
     private final int idmultiplex;
@@ -16,23 +17,37 @@ public class FabricaSala implements AbstractFactoryCRUD{
         this.idmultiplex=idmultiplex;
     }
     
+    
+    /** 
+     * @return Create
+     * retorna null ya que la funcionalidad aun no es implementada
+     */
     @Override
     public Create crearRegistro() {
         System.err.println("Funcionalidad no necesaria");
         return null;
     }
-
+    /** 
+     * @return Delete
+     * retorna null ya que la funcionalidad aun no es implementada
+     */
     @Override
     public Delete deleteRegistro() {
         System.err.println("Funcionalidad no necesaria");
         return null;
     }
-
+    /** 
+     * @return Read
+     * retorna un objeto ReadSalas
+     */
     @Override
     public Read readRegistro() {
         return new ReadSalas(idmultiplex);
     }
-
+    /** 
+     * @return Update
+     * retorna null ya que la funcionalidad aun no es implementada
+     */
     @Override
     public Update updateRegistro() {
         System.err.println("Funcionalidad no necesaria(por ahora:) )");

@@ -2,8 +2,9 @@ package com.alejandro.Logica.AbstractFactory;
 
 import com.alejandro.Logica.CRUD.*;
 /**
- *
- * @author USER
+ * Fabrica concreta para el CRUD de Empleados
+ * @author alejandro
+ * @version 1.0
  */
 public class FabricaEmpleado implements AbstractFactoryCRUD{
     @SuppressWarnings("FieldMayBeFinal")
@@ -40,7 +41,6 @@ public class FabricaEmpleado implements AbstractFactoryCRUD{
         this.id_multiplex=id_multiplex;
     }
 
-    //constructor para leer un registro segun el codigo de empleado y para eliminar un empleado
     /**
      * constructor para leer un registro de empleado o para eliminar un empleado
      * @param codigoempleado El parametro codigoempleado define el empleado al que se realizara la operacion
@@ -60,21 +60,35 @@ public class FabricaEmpleado implements AbstractFactoryCRUD{
     }
     
     
+    
+    /** 
+     * @return Create
+     * retorna un objeto CreateEmpleado
+     */
     @Override
     public Create crearRegistro() {
         return new CreateEmpleado(idempleado, nombre, apellidos, contraseña, telefono, fecha_inin_cargo, id_tipo_cargo, id_multiplex);
     }
-
+    /** 
+     * @return Delete
+     * retorna un objeto deleteEmpleado
+     */
     @Override
     public Delete deleteRegistro() {
         return new DeleteEmpleado(codigoempleado);
     }
-
+    /** 
+     * @return Read
+     * retorna un objeto readEmpleado
+     */
     @Override
     public Read readRegistro() {
         return new ReadEmpleado(codigoempleado);
     }
-
+    /** 
+     * @return Update
+     * retorna un objeto UpdateEmpleado
+     */
     @Override
     public Update updateRegistro() {
         return new UpdateEmpleado(codigoempleado, contraseña);

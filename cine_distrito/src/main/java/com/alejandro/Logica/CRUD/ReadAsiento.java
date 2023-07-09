@@ -7,8 +7,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 /**
- *
- * @author USER
+ * Implementacion producto concreto Read Asiento
+ * @author alejandro
+ * @version 1.0
  */
 public class ReadAsiento implements Read{
     singletonConexion conexion;
@@ -16,10 +17,19 @@ public class ReadAsiento implements Read{
     private Statement st;
     private ResultSet rs;
     private ArrayList<ArrayList> array;
+
+    /**
+     * Constructor readAsiento
+     * @param idSala define el id de la sala a la cual pertenecen los asientos
+     */
     public ReadAsiento(int idSala) {
         this.idSala=idSala;
     }
     
+    
+    /** 
+     * @return ArrayList
+     */
     @Override
     public ArrayList operacionCrud() {
         conexion=singletonConexion.getConexion();
@@ -30,7 +40,7 @@ public class ReadAsiento implements Read{
             st=conexion.getConnection().createStatement();
             rs=st.executeQuery(sql);
             while (rs.next()) {               
-                ArrayList arrayTemp= new ArrayList();
+                ArrayList arrayTemp= new ArrayList<>();
                 arrayTemp.add(rs.getInt(1));
                 arrayTemp.add(rs.getInt(2));
                 arrayTemp.add(rs.getInt(3));

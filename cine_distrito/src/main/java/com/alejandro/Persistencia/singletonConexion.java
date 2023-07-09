@@ -2,20 +2,27 @@ package com.alejandro.Persistencia;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Driver;
-
+/**
+ * @author alejandro
+ * @version 1.0
+ * 
+ * Clase singleton para manejar una instancia global en el programa para la conexion a la base de datos
+ *  */
 public class singletonConexion {
     private Connection conexion;
     private String password;
-    private String user;
+    private String alejandro;
     private static singletonConexion INSTANCE = null;
     private singletonConexion(){
         password = "123456";
-        user = "root";
+        alejandro = "root";
     }
+    /**
+     * Metodo que inicia la conexion a la base de datos
+     */
     public void Conectar(){
         try {
-            conexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/cine",user,password);
+            conexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/cine",alejandro,password);
         } catch (SQLException e) {
             System.err.println("Error en conexion(conectar):" +e);
         }        
@@ -25,6 +32,10 @@ public class singletonConexion {
             INSTANCE=new singletonConexion();
         }
     }
+    
+    /** 
+     * @return Instancia singleton de la clase
+     */
     public static singletonConexion getConexion(){
  
         if (INSTANCE==null) {
@@ -32,6 +43,10 @@ public class singletonConexion {
         }
         return INSTANCE;
     }
+    /**
+     * 
+     * @throws SQLException
+     */
     public void desconectar() throws SQLException{
         try {
             conexion.close();
@@ -40,13 +55,26 @@ public class singletonConexion {
         }
     }
 
+    /**
+     * 
+     * @param password 
+     * setter contraseña para la conexion a la base de datos
+     */
     public void setPassword(String password) {
         this.password = password;
     }
-
-    public void setUser(String user) {
-        this.user = user;
+    /**
+     * 
+     * @param alejandro
+     * setter usuario para la conexion a la base de datos
+     */
+    public void setalejandro(String alejandro) {
+        this.alejandro = alejandro;
     }
+    /**
+     * 
+     * @return objeto de tipo Connection para manipular los datos de la base de datos
+     */
     public Connection getConnection(){
         return conexion;
     }

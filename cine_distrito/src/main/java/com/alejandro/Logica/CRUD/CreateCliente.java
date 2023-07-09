@@ -7,8 +7,10 @@ import javax.swing.JOptionPane;
 
 import com.alejandro.Persistencia.singletonConexion;
 /**
- *
- * @author USER
+ * Implementacion producto concreto Create clientes
+ * @author alejandro
+ * @version 1.0
+ * 
  */
 public class CreateCliente implements Create{
     singletonConexion conexion;
@@ -19,7 +21,14 @@ public class CreateCliente implements Create{
     private final String correo;
     private final String sql="insert into cliente(idcliente,nombre,apellidos,contraseña,correo) values(?,?,?,?,?)";
     private PreparedStatement pst;
-    
+    /**
+     * 
+     * @param idcliente define el id del cliente nuevo
+     * @param nombre define el nombre del cliente nuevo
+     * @param apellidos define los apellidos del cliente nuevo
+     * @param contraseña define la contraseña del cliente
+     * @param correo define el correo electronico del cliente
+     */
     public CreateCliente(int idcliente,String nombre,String apellidos,String contraseña,String correo) {
         this.idcliente=idcliente;
         this.nombre=nombre;

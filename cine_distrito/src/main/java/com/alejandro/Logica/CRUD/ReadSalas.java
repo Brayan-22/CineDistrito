@@ -7,8 +7,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 /**
- *
- * @author USER
+ * Implementacion producto concreto Read Salas
+ * @author alejandro
+ * @version 1.0
  */
 public class ReadSalas implements Read{
     singletonConexion conexion;
@@ -17,10 +18,18 @@ public class ReadSalas implements Read{
     private Statement st;
     private ArrayList<ArrayList> array;
 
+    /**
+     * Constructor read salas
+     * @param idmultiplex define el id del multiplex de las salas a consultar
+     */
     public ReadSalas(int idmultiplex) {
         this.idmultiplex=idmultiplex;
     }
 
+    
+    /** 
+     * @return ArrayList
+     */
     @Override
     public ArrayList operacionCrud() {
         array=new ArrayList<>();

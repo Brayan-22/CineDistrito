@@ -6,14 +6,19 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 /**
- *
- * @author USER
+ * Implementacion producto concreto Read multiplex
+ * @author alejandro
+ * @version 1.0
  */
 public class ReadMultiplex implements Read{
     singletonConexion conexion;
     private Statement st;
     private ResultSet rs;
     private ArrayList<ArrayList> array;
+    
+    /** 
+     * @return ArrayList
+     */
     @Override
     public ArrayList operacionCrud() {
         array=new ArrayList();

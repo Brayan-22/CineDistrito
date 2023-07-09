@@ -5,14 +5,18 @@ import com.alejandro.Logica.CRUD.Read;
 import java.util.ArrayList;
 
 /**
- *
- * @author USER
+ * Logica de negocio del programa principal
+ * @author alejandro
+ * @version 1.0
  */
 public class Sistema {
     private AbstractFactoryCRUD miFabrica;
     private Read read;
     private ArrayList<Multiplex> arrayMultiplex;
     private ArrayList<ArrayList> arrayTemp;
+    /**
+     * Constructor Sistema
+     */
     public Sistema() {
         miFabrica=new FabricaMultiplex();
         read=miFabrica.readRegistro();
@@ -27,6 +31,11 @@ public class Sistema {
         }
     }
 
+    
+    /** 
+     * getter lista con los multiplex del cine
+     * @return ArrayList<Multiplex>
+     */
     public ArrayList<Multiplex> getArrayMultiplex() {
         return arrayMultiplex;
     }

@@ -7,8 +7,9 @@ import javax.swing.JOptionPane;
 
 
 /**
- *
- * @author USER
+ * Implementacion producto concreto Read Empleado
+ * @author alejandro
+ * @version 1.0
  */
 public class ReadEmpleado implements Read{
     singletonConexion conexion;
@@ -16,12 +17,21 @@ public class ReadEmpleado implements Read{
     private ResultSet rs;
     private ArrayList array;
     private final String codigoempleado;
+
+    /**
+     * Constructor read Empleado
+     * @param codigoempleado define el codigo del empleado a buscar
+     */
     public ReadEmpleado(String codigoempleado) {
         this.codigoempleado=codigoempleado;
         array=null;
     }
     
     
+    
+    /** 
+     * @return ArrayList
+     */
     @Override
     public ArrayList operacionCrud() {
         array = new ArrayList();

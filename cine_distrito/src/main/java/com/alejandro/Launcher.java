@@ -8,17 +8,26 @@ import com.alejandro.facade.*;
  */
 
 /**
- *
- * @author USER
+ * Clase principal del programa
+ * @author alejandro
+ * @version 1.0
  */
 public class Launcher {
     private Fachada miFachada;
+    /**
+     * Inicializador del programa
+     */
     public Launcher(){
         miFachada=new Fachada();
         miFachada.iniciar();
     }
     
     
+    
+    /** 
+     * Main
+     * @param args
+     */
     public static void main(String[] args) {
         new Launcher();
     }

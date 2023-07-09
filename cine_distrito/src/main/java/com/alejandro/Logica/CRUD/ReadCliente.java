@@ -9,8 +9,9 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author USER
+ * Implementacion producto concreto Read Cliente
+ * @author alejandro
+ * @version 1.0
  */
 public class ReadCliente implements Read{
     singletonConexion conexion;
@@ -19,12 +20,19 @@ public class ReadCliente implements Read{
     private Statement st;
     private ResultSet rs;
     
-    
+    /**
+     * Constructor read Cliente
+     * @param correo define el correo del cliente a consultar
+     */
     public ReadCliente(String correo) {
         this.correo=correo;
         array=null;
     }
     
+    
+    /** 
+     * @return ArrayList
+     */
     @Override
     public ArrayList operacionCrud() {
         array=new ArrayList();
