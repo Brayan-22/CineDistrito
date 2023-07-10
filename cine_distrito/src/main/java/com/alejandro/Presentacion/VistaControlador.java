@@ -174,7 +174,7 @@ public class VistaControlador extends JFrame {
 
 		vic.getBtnSalir().addActionListener(getControl());
 		vic.getBtnIngreso().addActionListener(getControl());
-		vic.getBtnOlvidoContrasena().addActionListener(getControl());
+                vic.getBtnOlvidoContrasena().addActionListener(getControl());
 		vic.getBtnRegistroUsuario().addActionListener(getControl());
 
 		vcs.getBtnContinue().addActionListener(getControl());

@@ -852,14 +852,7 @@ public class Fachada {
 	 * @return Boolean
 	 */
 	public Boolean esAdmin(VentanaInicio vi) {
-
-		if (vi.getTxtNombre().equalsIgnoreCase("Admin") && vi.getTxtContrasena().equalsIgnoreCase("Admin")) {
-
-			return true;
-		} else {
-			return false;
-		}
-
+                return vi.getTxtNombre().equalsIgnoreCase("Admin") && vi.getTxtContrasena().equalsIgnoreCase("Admin");
 	}
 
 	/**

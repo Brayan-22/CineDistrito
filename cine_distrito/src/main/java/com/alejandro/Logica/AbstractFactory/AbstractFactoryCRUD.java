@@ -9,22 +9,22 @@ import com.alejandro.Logica.CRUD.*;
  */
 public interface AbstractFactoryCRUD {
     /**
-     * 
+     * Metodo que corresponde a la creacion de un registro nuevo en la base de datoss
      * @return Create
      */
     public Create crearRegistro();
     /**
-     * 
+     * Metodo que corresponde a la eliminacion de un registro de la base de datos
      * @return Delete
      */
     public Delete deleteRegistro();
     /**
-     * 
+     * Metodo que corresponde a la lectura de un registro de la base de datos
      * @return Read
      */
     public Read readRegistro();
     /**
-     * 
+     * Metodo que corresponde a la actualizacion de un registro de la base de datos
      * @return Update
      */
     public Update updateRegistro();
