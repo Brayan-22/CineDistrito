@@ -35,8 +35,8 @@ public class Verificar {
 	}
 	/**
 	 * Metodo para verificar que una cadena de caracteres sea solo alfabetica
-	 * @param Texto
-	 * @return
+	 * @param Texto String
+	 * @return boolean
 	 */
 	public static boolean esTexto(String Texto) {
 		Pattern patron = Pattern.compile("[_A-Za-z]");

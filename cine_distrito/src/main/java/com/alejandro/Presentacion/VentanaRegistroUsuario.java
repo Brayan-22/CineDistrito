@@ -19,19 +19,57 @@ import javax.swing.JTextField;
  * @version 1.0
  */
 public class VentanaRegistroUsuario extends JPanel {
-
+        /**
+         * boton salir
+         */
 	private JButton btnSalir;
+        /**
+         * campo de texto nombre
+         */
 	private JTextField txtNombre;
+        /**
+         * campo de texto telefono
+         */
 	private JTextField txtTelefono;
+        /**
+         * campo de texto correo
+         */
 	private JTextField txtCorreo;
+        /**
+         * campo de texto contraseña
+         */
 	private JTextField txtContraseña;
+        /**
+         * campo de texto documento
+         */
 	private JTextField txtDocumento;
+        /**
+         * combo box elegir multiplex
+         */
 	private JComboBox<String> cmbMultiplex;
+        /**
+         * combo box elegir cargo
+         */
 	private JComboBox<String> cmbCargo;
+        /**
+         * combo box elegir rol
+         */
 	private JComboBox<String> cmbRol;
+        /**
+         * check box autorizacion
+         */
 	private JCheckBox cbxAutorizacion;
+        /**
+         * boton ingresar
+         */
 	private JButton btnIngreso;
+        /**
+         * label ingreso usuario
+         */
 	private JLabel lblIngresoUsuario;
+        /**
+         * campo texto apellido
+         */
 	private JTextField txtApellido;
 
 	/**
@@ -289,21 +327,21 @@ public class VentanaRegistroUsuario extends JPanel {
 	}
 	/**
 	 * getter combo box multiplex
-	 * @return JComboBox<String>
+	 * @return JComboBox
 	 */
 	public JComboBox<String> getCmbMultiplex() {
 		return cmbMultiplex;
 	}
 	/**
 	 * getter combo box cargos
-	 * @return JComboBox<String>
+	 * @return JComboBox
 	 */
 	public JComboBox<String> getCmbCargo() {
 		return cmbCargo;
 	}
 	/**
 	 * getter combo box roles
-	 * @return JComboBox<String>
+	 * @return JComboBox
 	 */
 	public JComboBox<String> getCmbRol() {
 		return cmbRol;

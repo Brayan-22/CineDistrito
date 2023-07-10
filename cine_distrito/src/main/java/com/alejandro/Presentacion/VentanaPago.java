@@ -16,11 +16,25 @@ import javax.swing.JToggleButton;
  * @version 1.0
  */
 public class VentanaPago extends JPanel {
-
+        /**
+         * boton salir
+         */
 	private JButton btnSalir;
+        /**
+         * boton finalizar
+         */
 	private JButton btnFinalizar;
+        /**
+         * toggleButton paypal
+         */
 	private JToggleButton tbtnPaypal;
+        /**
+         * toggleButton bitcoin
+         */
 	private JToggleButton tbtnBitcoin;
+        /**
+         * grupo de botones
+         */
 	private ButtonGroup grupoToggle;
 
 	/**

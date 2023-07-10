@@ -18,19 +18,34 @@ import javax.swing.JScrollPane;
  * @version 1.0
  */
 public class VentanaCartelera extends JPanel{
-
+        /**
+         * boton salir
+         */
 	private JButton btnSalir;
+        /**
+         * boton pelicula encanto
+         */
 	private JButton peliculaEncanto;
-	private JButton peliculaMoonfall;
-	private JButton peliculaPaseo6;
-	private JButton peliculaScream;
-	private JButton peliculaSpiderman;
-	String movieName ="";
+	/**
+         * boton pelicula moonfall
+         */
+        private JButton peliculaMoonfall;
+	/**
+         * boton pelicula paseo6
+         */
+        private JButton peliculaPaseo6;
+	/**
+         * boton pelicula scream
+         */
+        private JButton peliculaScream;
+	/**
+         * boton pelicula spiderman
+         */
+        private JButton peliculaSpiderman;
 	/**
 	 * Constructor que inicializa los componentes del panel
 	 */
 	public VentanaCartelera() {
-
 		this.setBounds(0, 0, 700, 700);
 		this.setLayout(null);
 		

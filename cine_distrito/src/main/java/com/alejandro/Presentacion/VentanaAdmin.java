@@ -12,9 +12,17 @@ import javax.swing.JPanel;
  * @version 1.0
  */
 public class VentanaAdmin extends JPanel {
-
+        /**
+         * boton agregar empleado
+         */
 	private JButton btnAgregarEmpleado;
+        /**
+         * boton cambiar contraseña
+         */
 	private JButton btnCambiarContraseña;
+        /**
+         * boton cerrar sesion
+         */
 	private JButton btnCerrarSesion;
 	/**
 	 * Constructor que inicializa los componentes del panel

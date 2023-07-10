@@ -21,15 +21,41 @@ import javax.swing.JTextField;
  * @version 1.0
  */
 public class VentanaIngresoCliente extends JPanel {
+        /**
+         * String cine seleccionado
+         */
 	private String CineSeleccionado;
+        /**
+         * String pelicula seleccionada
+         */
 	private String PeliculaSeleccionada;
-
+        /**
+         * panel principal
+         */
 	private JPanel pnlPrincipal;
+        /**
+         * campo texto contraseña
+         */
 	private JPasswordField pwdContraseña;
+        /**
+         * campo texto correo
+         */
 	private JTextField txtCorreo;
+        /**
+         * boton ingresar
+         */
 	private JButton btnIngreso;
+        /**
+         * boton salir
+         */
 	private JButton btnSalir;
+        /**
+         * boton olvidar contraseña
+         */
 	private JButton btnOlvidoContraseña;
+        /**
+         * boton registrar usuario
+         */
 	private JButton btnRegistrarUsuario;
 
 	/**

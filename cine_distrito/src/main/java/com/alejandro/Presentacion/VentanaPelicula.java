@@ -18,20 +18,53 @@ import javax.swing.JTextArea;
  * @version 1.0
  */
 public class VentanaPelicula extends JPanel {
-
+        /**
+         * boton salir
+         */
 	private JButton btnSalir;
+        /**
+         * label imagen de la pelicula
+         */
 	private JLabel imgPelicula;
-	public static JComboBox<String> cmbCinesDisponibles;
+        /**
+         * combo box de los cines disponibles
+         */
+	public JComboBox<String> cmbCinesDisponibles;
+        /**
+         * boton continuar
+         */
 	private JButton btnContinue;
+        /**
+         * label titulo de la pelicula
+         */
 	private JLabel lblTitulo;
+        /**
+         * text area descripcion de la pelicula
+         */
 	private JTextArea txaDescripcion;
-
+        /**
+         * label limite de edad
+         */
 	private JLabel lblLimiteEdad;
+        /**
+         * label genero de pelicula
+         */
 	private JLabel lblGeneros;
+        /**
+         * label directores de la peliculas
+         */
 	private JLabel lblDirectores;
+        /**
+         * label directores peliculas
+         */
 	private JLabel lblDirectoresPelicula;
-
+        /**
+         * combo box salas disponibles
+         */
 	private JComboBox<String> cmbSalasDisponibles;
+        /**
+         * Logica de negocio principal
+         */
 	private Sistema sistema;
 	/**
 	 * Constructor que inicializa los componentes del panel
@@ -146,21 +179,21 @@ public class VentanaPelicula extends JPanel {
 	}
 	/**
 	 * getter comboBox cines disponibles
-	 * @return JComboBox<String>
+	 * @return JComboBox
 	 */
 	public JComboBox<String> getCmbCinesDisponibles() {
 		return cmbCinesDisponibles;
 	}
 	/**
 	 * getter comboBox salas disponibles
-	 * @return JComboBox<String>
+	 * @return JComboBox
 	 */
 	public JComboBox<String> getCmbSalasDisponibles() {
 		return cmbSalasDisponibles;
 	}
 	/**
 	 * setter comboBox salas disponibles
-	 * @param cmbSalasDisponibles JComboBox<String>
+	 * @param cmbSalasDisponibles JComboBox
 	 */
 	public void setCmbSalasDisponibles(JComboBox<String> cmbSalasDisponibles) {
 		this.cmbSalasDisponibles = cmbSalasDisponibles;

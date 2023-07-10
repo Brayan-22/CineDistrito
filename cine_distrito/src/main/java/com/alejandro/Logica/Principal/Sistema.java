@@ -34,7 +34,7 @@ public class Sistema {
     
     /** 
      * getter lista con los multiplex del cine
-     * @return ArrayList<Multiplex>
+     * @return ArrayList
      */
     public ArrayList<Multiplex> getArrayMultiplex() {
         return arrayMultiplex;

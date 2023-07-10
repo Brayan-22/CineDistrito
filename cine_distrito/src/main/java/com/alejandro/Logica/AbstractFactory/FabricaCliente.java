@@ -40,7 +40,7 @@ public class FabricaCliente implements AbstractFactoryCRUD{
     }
     /**
      * Constructor para leer un registro de cliente
-     * @param correo 
+     * @param correo String define el correo del cliente
      */
     public FabricaCliente(String correo) {
         this.correo=correo;

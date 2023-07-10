@@ -37,7 +37,7 @@ public class Asiento {
     }
     /**
      * Setter idAsiento
-     * @param idAsiento
+     * @param idAsiento int
      */
     public void setIdAsiento(int idAsiento) {
         this.idAsiento = idAsiento;

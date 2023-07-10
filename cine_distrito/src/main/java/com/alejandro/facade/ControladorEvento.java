@@ -26,12 +26,12 @@ public class ControladorEvento implements ActionListener, KeyListener {
 	}
 
 	/**
-	 * metodo para listener de los botones
-	 * @param e
+	 * metodo para los listener de los botones
+	 * @param e ActionEvent 
 	 */
 	public void actionPerformed(ActionEvent e) {
 
-		// // // // // // // // // VENTANA INICIO // // // // // // // // //
+		// // // // // // // // // VENTANA INICyIO // // // // // // // // //
 		if (e.getSource() == (interfaz.getVentanaInicio().getBtnSalir())) {
 			System.out.println("SALIR");
 			interfaz.getFachada().salir();

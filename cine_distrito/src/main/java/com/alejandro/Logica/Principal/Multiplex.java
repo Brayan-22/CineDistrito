@@ -69,14 +69,14 @@ public class Multiplex {
     }
     /**
      * getter salas multiplex
-     * @return ArrayList<Sala>
+     * @return ArrayList
      */
     public ArrayList<Sala> getArraySalas() {
         return arraySalas;
     }
     /**
      * setter salas
-     * @param arraySalas ArrayLista<Sala>
+     * @param arraySalas ArrayLista
      */
     public void setArraySalas(ArrayList<Sala> arraySalas) {
         this.arraySalas = arraySalas;

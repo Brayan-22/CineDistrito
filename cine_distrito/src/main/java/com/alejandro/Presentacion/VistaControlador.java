@@ -9,21 +9,61 @@ import com.alejandro.facade.*;
  * @version 1.0
  */
 public class VistaControlador extends JFrame {
-
+        /**
+         * Fachada/modelo
+         */
 	private Fachada fachada;
+        /**
+         * Controlador de los eventos
+         */
 	private ControladorEvento control;
-
+        /**
+         * panel de ventana admin
+         */
 	private VentanaAdmin va;
+        /**
+         * panel de ventana recueperar contraseña
+         */
 	private VentanaRecuperarContrasena vrcontraseña;
+        /**
+         * panel de ventana cartelera
+         */
 	private VentanaCartelera vc;
+        /**
+         * panel de ventana compra sillas
+         */
 	private VentanaCompraSilla vcs;
+        /**
+         * panel de ventana establecer contraseña
+         */
 	private VentanaEstablecerContrasena vec;
+        /**
+         * panel de ventana ingreso de clientes
+         */
 	private VentanaIngresoCliente vic;
+        /**
+         * panel de ventana inicio
+         */
 	private VentanaInicio vi;
+        /**
+         * panel de ventana peliculas
+         */
 	private VentanaPelicula vp;
+        /**
+         * panel de ventana registro de cliente
+         */
 	private VentanaRegistroCliente vrc;
+        /**
+         * panel de ventana registro usuario
+         */
 	private VentanaRegistroUsuario vru;
+        /**
+         * panel de ventana snacks
+         */
 	private VentanaSnacks vs;
+        /**
+         * panel de ventana de pagos
+         */
 	private VentanaPago vpago;
 	/**
 	 * Constructor de la ventana principal del programa

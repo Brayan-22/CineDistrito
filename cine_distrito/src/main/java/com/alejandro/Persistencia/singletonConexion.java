@@ -45,7 +45,7 @@ public class singletonConexion {
     }
     /**
      * 
-     * @throws SQLException
+     * @throws SQLException lanza una excepcion en caso de un error
      */
     public void desconectar() throws SQLException{
         try {

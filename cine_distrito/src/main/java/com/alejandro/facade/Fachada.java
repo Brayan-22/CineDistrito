@@ -42,7 +42,10 @@ public class Fachada {
 		interfaz = new VistaControlador(this);
 
 	}
-
+        /**
+         * 
+         * metodo para iniciar la aplicacion
+         */
 	public void iniciar() {
 
 		interfaz.setVisible(true);
@@ -917,8 +920,8 @@ public class Fachada {
 	/**
 	 * meotod que cambia de panel VentanaEstablecerContrasena a VentanaAdmin
 	 * 
-	 * @param vec
-	 * @param va
+	 * @param vec VentanaEstablecerContrasena
+	 * @param va VentanaAdmin
 	 */
 	public void regresoContraseñaAdmin(VentanaEstablecerContrasena vec, VentanaAdmin va) {
 
@@ -1011,7 +1014,8 @@ public class Fachada {
 
 	///////////////////////////////////////////////////// VETNANA PAGO
 	///////////////////////////////////////////////////// ////////////////////////////////////
-	public int cargo(String cargo) {
+        
+	private int cargo(String cargo) {
 		switch (cargo) {
 			case "Director":
 				return 1;
@@ -1047,7 +1051,7 @@ public class Fachada {
 		}
 	}
 
-	public int multiplex(String multiplex) {
+	private int multiplex(String multiplex) {
 		switch (multiplex) {
 			case "Titan":
 				return 1;
@@ -1273,8 +1277,8 @@ public class Fachada {
 	/**
 	 * metodo que cambia de panel VentanaPago a VentanaSnacks
 	 * 
-	 * @param vs
-	 * @param vp
+	 * @param vs VentanaSnacks
+	 * @param vp VentanaPago
 	 */
 	public void regresoPagoSnacks(VentanaSnacks vs, VentanaPago vp) {
 

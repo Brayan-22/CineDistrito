@@ -20,20 +20,57 @@ import javax.swing.JTextField;
  * @version 1.0
  */
 public class VentanaRegistroCliente extends JPanel {
-
+        /**
+         * panel principal
+         */
 	private JPanel pnlPrincipal;
+        /**
+         * boton salir
+         */
 	private JButton btnSalir;
+        /**
+         * campo de texto nombre
+         */
 	private JTextField txtNombre;
+        /**
+         * campo de texto apellidos
+         */
 	private JTextField txtApellido;
+        /**
+         * campo de texto correo
+         */
 	private JTextField txtCorreo;
+        /**
+         * campo de texto contraseña
+         */
 	private JTextField txtContraseña;
+        /**
+         * campo de texto documento
+         */
 	private JTextField txtDocumento;
+        /**
+         * combo box tipo documento
+         */
 	private JComboBox<String> cmbDocumento;
+        /**
+         * check box autorizacion
+         */
 	private JCheckBox cbxAutorizacion;
+        /**
+         * boton ingresar
+         */
 	private JButton btnIngreso;
+        /**
+         * label ingreso usuario
+         */
 	private JLabel lblIngresoUsuario;
-
+        /**
+         * cadena cine
+         */
 	private String Cine;
+        /**
+         * cadena peliculas
+         */
 	private String Pelicula;
 
 	/**
@@ -230,7 +267,7 @@ public class VentanaRegistroCliente extends JPanel {
 	}
 	/**
 	 * getter combo box documentos
-	 * @return JComboBox<String>
+	 * @return JComboBox
 	 */
 	public JComboBox<String> getCmbDocumento() {
 		return cmbDocumento;

@@ -23,27 +23,65 @@ import javax.swing.SpinnerNumberModel;
  * @version 1.0
  */
 public class VentanaSnacks extends JPanel {
-
+        /**
+         * panel principal
+         */
 	private JPanel pnlPrincipal;
+        /**
+         * boton salir
+         */
 	private JButton btnSalir;
+        /**
+         * panel combos
+         */
 	private JPanel pnlCombos;
+        /**
+         * panel snacks
+         */
 	private JPanel pnlSnacks;
-
+        /**
+         * spinner combo1
+         */
 	private JSpinner spnCombo1;
+        /**
+         * toggle boton combo1
+         */
 	private JToggleButton tbtnImgCombo1;
-
+        /**
+         * spinner combo2
+         */
 	private JSpinner spnCombo2;
+        /**
+         * toggle boton combo2
+         */
 	private JToggleButton tbtnImgCombo2;
-
+        /**
+         * spinner combo3
+         */
 	private JSpinner spnCombo3;
+        /**
+         * toggle boton combo3
+         */
 	private JToggleButton tbtnImgCombo3;
-
+        /**
+         * spinner combo4
+         */
 	private JSpinner spnCombo4;
+        /**
+         * toggle boton combo4
+         */
 	private JToggleButton tbtnImgCombo4;
-
+        /**
+         * boton continuar
+         */
 	private JButton btnContinuar;
-
+        /**
+         * cadena pelicula
+         */
 	private String Pelicula;
+        /**
+         * cadena cine
+         */
 	private String Cine;
 
 	/**

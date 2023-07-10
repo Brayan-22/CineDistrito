@@ -17,16 +17,45 @@ import javax.swing.JTextField;
  * @version 1.0
  */
 public class VentanaRecuperarContrasena extends JPanel {
-
+        /**
+         * panel principal
+         */
 	private JPanel pnlPrincipal;
+        /**
+         * campo de texto para el correo
+         */
 	private JTextField txtCorreo;
+        /**
+         * campo de texto para el documento
+         */
 	private JTextField txtDocumento;
+        /**
+         * boton continuar
+         */
 	private JButton btnContinue;
+        /**
+         * boton salir
+         */
 	private JButton btnSalir;
+        /**
+         * nombre cine
+         */
 	private String Cine;
+        /**
+         * nombre pelicula
+         */
 	private String Pelicula;
+        /**
+         * label contraseña
+         */
 	private JLabel lblContraseña;
+        /**
+         * label documento
+         */
 	private JLabel lblDocumento;
+        /**
+         * label correo
+         */
 	private JLabel lblCorreo;
 	/**
 	 * Constructor que inicializa los componentes del panel

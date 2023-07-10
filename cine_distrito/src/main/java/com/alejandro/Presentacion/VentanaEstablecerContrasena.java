@@ -16,12 +16,29 @@ import javax.swing.JTextField;
  * @version 1.0
  */
 public class VentanaEstablecerContrasena extends JPanel {
-
+        /**
+         * campo texto contraseña
+         */
 	private JTextField txtContraseña;
+        /**
+         * campo texto codigo
+         */
 	private JTextField txtCodigo;
+        /**
+         * boton continuar
+         */
 	private JButton btnContinue;
+        /**
+         * boton salir
+         */
 	private JButton btnSalir;
+        /**
+         * label contraseña
+         */
 	private JLabel lblContraseña;
+        /**
+         * label codigo
+         */
 	private JLabel lblCodigo;
 	/**
 	 * Constructor que inicializa los componentes del panel

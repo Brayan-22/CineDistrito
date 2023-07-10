@@ -17,10 +17,21 @@ import javax.swing.JTextField;
  * @version 1.0
  */
 public class VentanaInicio extends JPanel {
-
+        /**
+         * campo texto nombre
+         */
 	private JTextField txtNombre;
+        /**
+         * campo texto contraseña
+         */
 	private JPasswordField pwdContraseña;
+        /**
+         * boton salir
+         */
 	private JButton btnSalir;
+        /**
+         * boton ingresar
+         */
 	private JButton btnIngreso;
 	/**
 	 * Constructor que inicializa los componentes del panel
@@ -38,7 +49,7 @@ public class VentanaInicio extends JPanel {
 
 		JLabel lblImgUsuario = new JLabel();
 		lblImgUsuario.setBounds(270, 20, 150, 150);
-		ImageIcon imagenUsuario = new ImageIcon("cine_distrito/src/main/resources/img/imgalejandro.png");
+		ImageIcon imagenUsuario = new ImageIcon("./src/main/resources/img/imgUser.png");
 
 		lblImgUsuario.setIcon(new ImageIcon(imagenUsuario.getImage().getScaledInstance(lblImgUsuario.getWidth(),
 				lblImgUsuario.getHeight(), Image.SCALE_SMOOTH)));
@@ -48,7 +59,7 @@ public class VentanaInicio extends JPanel {
 		btnIngreso.setBounds(280, 550, 134, 54);
 		btnIngreso.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 		btnIngreso.setContentAreaFilled(false);
-		ImageIcon imagenIngreso = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnIngreso.png");
+		ImageIcon imagenIngreso = new ImageIcon("./src/main/resources/img/imgBtnIngreso.png");
 		btnIngreso.setIcon(new ImageIcon(imagenIngreso.getImage().getScaledInstance(btnIngreso.getWidth(),
 				btnIngreso.getHeight(), Image.SCALE_SMOOTH)));
 		pnlPrincipal.add(btnIngreso);
@@ -57,7 +68,7 @@ public class VentanaInicio extends JPanel {
 		btnSalir.setBounds(20, 20, 60, 60);
 		btnSalir.setContentAreaFilled(false);
 		btnSalir.setBorder(BorderFactory.createLineBorder(Color.GREEN, 0, true));
-		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/Exit.png");
+		ImageIcon imagenSalir = new ImageIcon("./src/main/resources/img/Exit.png");
 
 		btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
 				btnSalir.getHeight(), Image.SCALE_SMOOTH)));

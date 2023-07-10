@@ -81,14 +81,14 @@ public class Sala {
     }
     /**
      * getter lista de asientos
-     * @return ArrayList<Asiento>
+     * @return ArrayList
      */
     public ArrayList<Asiento> getArrayAsientos() {
         return arrayAsientos;
     }
     /**
      * setter lista de asientos
-     * @param arrayAsientos ArrayList<Asiento>
+     * @param arrayAsientos ArrayList
      */
     public void setArrayAsientos(ArrayList<Asiento> arrayAsientos) {
         this.arrayAsientos = arrayAsientos;

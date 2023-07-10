@@ -26,26 +26,55 @@ import javax.swing.SpinnerNumberModel;
  * @version 1.0
  */
 public class VentanaCompraSilla extends JPanel {
-
+        /**
+         * boton salir 
+         */
 	private JButton btnSalir;
+        /**
+         * boton continuar
+         */
 	private JButton btnContinue;
-
+        /**
+         * componentes vector
+         */
 	private Component[] componentes;
+        /**
+         * arrayBotones
+         */
 	private ArrayList<JToggleButton> arrayBotones;
-
+        /**
+         * label sala actual
+         */
 	private JLabel lblSalaActual;
-
+        /**
+         * radioboton silla general
+         */
 	private JRadioButton rbtnGeneral;
+        /**
+         * radioboton silla preferencial
+         */
 	private JRadioButton rbtnPreferencial;
-
+        /**
+         * spinner silla general
+         */
 	private JSpinner spnGeneral;
+        /**
+         * spinner silla preferencial
+         */
 	private JSpinner spnPreferencial;
-
+        /**
+         * label pelicula
+         */
 	private JLabel lblPelicula;
+        /**
+         * label cine
+         */
 	private JLabel lblCine;
+        /**
+         * Logica de negocio principal
+         */
 	private Sistema sistema;
 
-	String Sillas = "";
 
 	/**
 	 * Constructor que inicializa los componentes del panel
@@ -348,14 +377,14 @@ public class VentanaCompraSilla extends JPanel {
 	}
 	/**
 	 * getter JToggleButton 
-	 * @return ArrayList<JToggleButton>
+	 * @return ArrayList
 	 */
 	public ArrayList<JToggleButton> getArrayBotones() {
 		return arrayBotones;
 	}
 	/**
 	 * setter arrayBotones
-	 * @param arrayBotones ArrayList<JToggleButton>
+	 * @param arrayBotones ArrayList
 	 */
 	public void setArrayBotones(ArrayList<JToggleButton> arrayBotones) {
 		this.arrayBotones = arrayBotones;
