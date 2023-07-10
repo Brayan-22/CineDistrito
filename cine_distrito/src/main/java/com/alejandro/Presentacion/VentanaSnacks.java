@@ -101,7 +101,7 @@ public class VentanaSnacks extends JPanel {
 		btnSalir.setBounds(20, 20, 60, 40);
 		btnSalir.setContentAreaFilled(false);
 		btnSalir.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
-		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/exitArrow.png");
+		ImageIcon imagenSalir = new ImageIcon("./src/main/resources/img/exitArrow.png");
 
 		btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
 				btnSalir.getHeight(), Image.SCALE_SMOOTH)));
@@ -118,7 +118,7 @@ public class VentanaSnacks extends JPanel {
 		btnContinuar = new JButton();
 		btnContinuar.setBounds(280, 580, 134, 54);
 		btnContinuar.setContentAreaFilled(false);
-		ImageIcon imagenIngreso = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnContinue.png");
+		ImageIcon imagenIngreso = new ImageIcon("./src/main/resources/img/imgBtnContinue.png");
 		btnContinuar.setIcon(new ImageIcon(imagenIngreso.getImage().getScaledInstance(btnContinuar.getWidth(),
 				btnContinuar.getHeight(), Image.SCALE_SMOOTH)));
 
@@ -156,7 +156,7 @@ public class VentanaSnacks extends JPanel {
 
 		tbtnImgCombo1 = new JToggleButton();
 		tbtnImgCombo1.setBounds(30, 70, 151, 150);
-		ImageIcon imagenCombo1 = new ImageIcon("cine_distrito/src/main/resources/img/combos/imgCombo1bn.png");
+		ImageIcon imagenCombo1 = new ImageIcon("./src/main/resources/img/combos/imgCombo1bn.png");
 		tbtnImgCombo1.setIcon(new ImageIcon(imagenCombo1.getImage().getScaledInstance(tbtnImgCombo1.getWidth(),
 				tbtnImgCombo1.getHeight(), Image.SCALE_SMOOTH)));
 
@@ -189,7 +189,7 @@ public class VentanaSnacks extends JPanel {
 
 		tbtnImgCombo2 = new JToggleButton();
 		tbtnImgCombo2.setBounds(30, 310, 151, 150);
-		ImageIcon imagenCombo2 = new ImageIcon("cine_distrito/src/main/resources/img/combos/imgCombo2bn.png");
+		ImageIcon imagenCombo2 = new ImageIcon("./src/main/resources/img/combos/imgCombo2bn.png");
 		tbtnImgCombo2.setIcon(new ImageIcon(imagenCombo2.getImage().getScaledInstance(tbtnImgCombo2.getWidth(),
 				tbtnImgCombo2.getHeight(), Image.SCALE_SMOOTH)));
 
@@ -222,7 +222,7 @@ public class VentanaSnacks extends JPanel {
 
 		tbtnImgCombo3 = new JToggleButton();
 		tbtnImgCombo3.setBounds(30, 580, 151, 150);
-		ImageIcon imagenCombo3 = new ImageIcon("cine_distrito/src/main/resources/img/combos/imgCombo3bn.png");
+		ImageIcon imagenCombo3 = new ImageIcon("./src/main/resources/img/combos/imgCombo3bn.png");
 		tbtnImgCombo3.setIcon(new ImageIcon(imagenCombo3.getImage().getScaledInstance(tbtnImgCombo3.getWidth(),
 				tbtnImgCombo3.getHeight(), Image.SCALE_SMOOTH)));
 
@@ -254,7 +254,7 @@ public class VentanaSnacks extends JPanel {
 
 		tbtnImgCombo4 = new JToggleButton();
 		tbtnImgCombo4.setBounds(30, 830, 151, 150);
-		ImageIcon imagenCombo4 = new ImageIcon("cine_distrito/src/main/resources/img/combos/imgCombo4bn.png");
+		ImageIcon imagenCombo4 = new ImageIcon("./src/main/resources/img/combos/imgCombo4bn.png");
 		tbtnImgCombo4.setIcon(new ImageIcon(imagenCombo4.getImage().getScaledInstance(tbtnImgCombo4.getWidth(),
 				tbtnImgCombo4.getHeight(), Image.SCALE_SMOOTH)));
 

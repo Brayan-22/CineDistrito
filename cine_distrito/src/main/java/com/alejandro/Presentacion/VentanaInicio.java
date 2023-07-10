@@ -22,9 +22,9 @@ public class VentanaInicio extends JPanel {
          */
 	private JTextField txtNombre;
         /**
-         * campo texto contraseña
+         * campo texto contrasena
          */
-	private JPasswordField pwdContraseña;
+	private JPasswordField pwdContrasena;
         /**
          * boton salir
          */
@@ -96,26 +96,26 @@ public class VentanaInicio extends JPanel {
 
 		pnlNombre.add(txtNombre);
 
-		JPanel pnlContraseña = new JPanel();
-		pnlContraseña.setLayout(null);
-		pnlContraseña.setBounds(50, 350, 600, 130);
-		pnlContraseña.setOpaque(false);
-		pnlContraseña.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
+		JPanel pnlContrasena = new JPanel();
+		pnlContrasena.setLayout(null);
+		pnlContrasena.setBounds(50, 350, 600, 130);
+		pnlContrasena.setOpaque(false);
+		pnlContrasena.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
 
-		JLabel lblContraseña = new JLabel();
-		lblContraseña.setBounds(250, 20, 150, 30);
-		lblContraseña.setText("Contraseña");
-		lblContraseña.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
+		JLabel lblContrasena = new JLabel();
+		lblContrasena.setBounds(250, 20, 150, 30);
+		lblContrasena.setText("Contrasena");
+		lblContrasena.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 
-		pnlContraseña.add(lblContraseña);
+		pnlContrasena.add(lblContrasena);
 
-		pwdContraseña = new JPasswordField();
-		pwdContraseña.setBounds(200, 75, 200, 30);
-		pwdContraseña.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
+		pwdContrasena = new JPasswordField();
+		pwdContrasena.setBounds(200, 75, 200, 30);
+		pwdContrasena.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 
-		pnlContraseña.add(pwdContraseña);
+		pnlContrasena.add(pwdContrasena);
 
-		pnlPrincipal.add(pnlContraseña);
+		pnlPrincipal.add(pnlContrasena);
 
 	}
 
@@ -135,11 +135,11 @@ public class VentanaInicio extends JPanel {
 		return btnIngreso;
 	}
 	/**
-	 * getter campo contraseña
+	 * getter campo contrasena
 	 * @return JPasswordField
 	 */
-	public JPasswordField getPwdContraseña() {
-		return pwdContraseña;
+	public JPasswordField getPwdContrasena() {
+		return pwdContrasena;
 	}
 	/**
 	 * getter campo nombre
@@ -156,11 +156,11 @@ public class VentanaInicio extends JPanel {
 		return txtNombre.getText();
 	}
 	/**
-	 * getter texto del campo de la contraseña
+	 * getter texto del campo de la contrasena
 	 * @return String 
 	 */
-	public String getTxtContraseña() {
-		String myPass = String.valueOf(pwdContraseña.getPassword());
+	public String getTxtContrasena() {
+		String myPass = String.valueOf(pwdContrasena.getPassword());
 		return myPass;
 	}
 

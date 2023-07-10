@@ -17,23 +17,23 @@ public class CreateCliente implements Create{
     private final int idcliente;
     private final String nombre;
     private final String apellidos;
-    private final String contraseña;
+    private final String contrasena;
     private final String correo;
-    private final String sql="insert into cliente(idcliente,nombre,apellidos,contraseña,correo) values(?,?,?,?,?)";
+    private final String sql="insert into cliente(idcliente,nombre,apellidos,contrasena,correo) values(?,?,?,?,?)";
     private PreparedStatement pst;
     /**
      * 
      * @param idcliente define el id del cliente nuevo
      * @param nombre define el nombre del cliente nuevo
      * @param apellidos define los apellidos del cliente nuevo
-     * @param contraseña define la contraseña del cliente
+     * @param contrasena define la contrasena del cliente
      * @param correo define el correo electronico del cliente
      */
-    public CreateCliente(int idcliente,String nombre,String apellidos,String contraseña,String correo) {
+    public CreateCliente(int idcliente,String nombre,String apellidos,String contrasena,String correo) {
         this.idcliente=idcliente;
         this.nombre=nombre;
         this.apellidos=apellidos;
-        this.contraseña=contraseña;
+        this.contrasena=contrasena;
         this.correo=correo;
     }
     
@@ -46,7 +46,7 @@ public class CreateCliente implements Create{
             pst.setInt(1, idcliente);
             pst.setString(2, nombre);
             pst.setString(3, apellidos);
-            pst.setString(4, contraseña);
+            pst.setString(4, contrasena);
             pst.setString(5, correo);
             pst.execute();
             conexion.desconectar();

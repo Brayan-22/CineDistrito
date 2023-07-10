@@ -97,7 +97,7 @@ public class VentanaCompraSilla extends JPanel {
 		btnSalir.setBounds(20, 20, 60, 40);
 		btnSalir.setContentAreaFilled(false);
 		btnSalir.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
-		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/exitArrow.png");
+		ImageIcon imagenSalir = new ImageIcon("./src/main/resources/img/exitArrow.png");
 
 		btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
 				btnSalir.getHeight(), Image.SCALE_SMOOTH)));
@@ -107,7 +107,7 @@ public class VentanaCompraSilla extends JPanel {
 		btnContinue = new JButton();
 		btnContinue.setBounds(400, 550, 154, 54);
 		btnContinue.setContentAreaFilled(false);
-		ImageIcon imagenContinue = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnContinue.png");
+		ImageIcon imagenContinue = new ImageIcon("./src/main/resources/img/imgBtnContinue.png");
 
 		btnContinue.setIcon(new ImageIcon(imagenContinue.getImage().getScaledInstance(btnContinue.getWidth(),
 				btnContinue.getHeight(), Image.SCALE_SMOOTH)));
@@ -124,9 +124,9 @@ public class VentanaCompraSilla extends JPanel {
 
 		///////////////////////////////////////////
 
-		ImageIcon imagenSilla = new ImageIcon("cine_distrito/src/main/resources/img/imgAsiento.png");
+		ImageIcon imagenSilla = new ImageIcon("./src/main/resources/img/imgAsiento.png");
 		ImageIcon imagenSillaPreferencial = new ImageIcon(
-				"cine_distrito/src/main/resources/img/imgAsientoPreferencial.png");
+				"./src/main/resources/img/imgAsientoPreferencial.png");
 
 		JPanel pnlComplementos = new JPanel();
 		pnlComplementos.setBackground(Color.LIGHT_GRAY);

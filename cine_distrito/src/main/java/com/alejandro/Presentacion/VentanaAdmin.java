@@ -17,9 +17,9 @@ public class VentanaAdmin extends JPanel {
          */
 	private JButton btnAgregarEmpleado;
         /**
-         * boton cambiar contraseña
+         * boton cambiar contrasena
          */
-	private JButton btnCambiarContraseña;
+	private JButton btnCambiarContrasena;
         /**
          * boton cerrar sesion
          */
@@ -41,7 +41,7 @@ public class VentanaAdmin extends JPanel {
 		btnCerrarSesion = new JButton();
 		btnCerrarSesion.setBounds(250, 580, 168, 49);
 		btnCerrarSesion.setContentAreaFilled(false);
-		ImageIcon imagenCerrarSesion = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnCerrarSesion.png");
+		ImageIcon imagenCerrarSesion = new ImageIcon("./src/main/resources/img/imgBtnCerrarSesion.png");
 		btnCerrarSesion.setIcon(new ImageIcon(imagenCerrarSesion.getImage()
 				.getScaledInstance(btnCerrarSesion.getWidth(), btnCerrarSesion.getHeight(), Image.SCALE_SMOOTH)));
 
@@ -51,21 +51,21 @@ public class VentanaAdmin extends JPanel {
 		btnAgregarEmpleado.setBounds(110, 170, 186, 49);
 		btnAgregarEmpleado.setContentAreaFilled(false);
 		ImageIcon imagenAgregarEmpleado = new ImageIcon(
-				"cine_distrito/src/main/resources/img/imgBtnAgregarUsuario.png");
+				"./src/main/resources/img/imgBtnAgregarUsuario.png");
 		btnAgregarEmpleado.setIcon(new ImageIcon(imagenAgregarEmpleado.getImage()
 				.getScaledInstance(btnAgregarEmpleado.getWidth(), btnAgregarEmpleado.getHeight(), Image.SCALE_SMOOTH)));
 
 		pnlPrincipal.add(btnAgregarEmpleado);
 
-		btnCambiarContraseña = new JButton();
-		btnCambiarContraseña.setBounds(400, 170, 186, 49);
-		btnCambiarContraseña.setContentAreaFilled(false);
-		ImageIcon imagenCambiarContraseña = new ImageIcon(
-				"cine_distrito/src/main/resources/img/imgBtnCambiarContraseña.png");
-		btnCambiarContraseña.setIcon(new ImageIcon(imagenCambiarContraseña.getImage().getScaledInstance(
-				btnCambiarContraseña.getWidth(), btnCambiarContraseña.getHeight(), Image.SCALE_SMOOTH)));
+		btnCambiarContrasena = new JButton();
+		btnCambiarContrasena.setBounds(400, 170, 186, 49);
+		btnCambiarContrasena.setContentAreaFilled(false);
+		ImageIcon imagenCambiarContrasena = new ImageIcon(
+				"./src/main/resources/img/imgBtnCambiarContrasena.png");
+		btnCambiarContrasena.setIcon(new ImageIcon(imagenCambiarContrasena.getImage().getScaledInstance(
+				btnCambiarContrasena.getWidth(), btnCambiarContrasena.getHeight(), Image.SCALE_SMOOTH)));
 
-		pnlPrincipal.add(btnCambiarContraseña);
+		pnlPrincipal.add(btnCambiarContrasena);
 
 	}
 
@@ -77,11 +77,11 @@ public class VentanaAdmin extends JPanel {
 		return btnAgregarEmpleado;
 	}
 	/**
-	 * getter boton cambiarContraseña
+	 * getter boton cambiarContrasena
 	 * @return JButton
 	 */
-	public JButton getBtnCambiarContraseña() {
-		return btnCambiarContraseña;
+	public JButton getBtnCambiarContrasena() {
+		return btnCambiarContrasena;
 	}
 	/**
 	 * getter boton cerrar sesion

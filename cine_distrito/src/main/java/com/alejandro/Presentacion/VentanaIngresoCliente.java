@@ -34,9 +34,9 @@ public class VentanaIngresoCliente extends JPanel {
          */
 	private JPanel pnlPrincipal;
         /**
-         * campo texto contraseña
+         * campo texto contrasena
          */
-	private JPasswordField pwdContraseña;
+	private JPasswordField pwdContrasena;
         /**
          * campo texto correo
          */
@@ -50,9 +50,9 @@ public class VentanaIngresoCliente extends JPanel {
          */
 	private JButton btnSalir;
         /**
-         * boton olvidar contraseña
+         * boton olvidar contrasena
          */
-	private JButton btnOlvidoContraseña;
+	private JButton btnOlvidoContrasena;
         /**
          * boton registrar usuario
          */
@@ -75,7 +75,7 @@ public class VentanaIngresoCliente extends JPanel {
 		btnIngreso = new JButton();
 		btnIngreso.setBounds(280, 500, 134, 54);
 		btnIngreso.setContentAreaFilled(false);
-		ImageIcon imagenIngreso = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnIngreso.png");
+		ImageIcon imagenIngreso = new ImageIcon("./src/main/resources/img/imgBtnIngreso.png");
 		btnIngreso.setIcon(new ImageIcon(imagenIngreso.getImage().getScaledInstance(btnIngreso.getWidth(),
 				btnIngreso.getHeight(), Image.SCALE_SMOOTH)));
 
@@ -85,27 +85,27 @@ public class VentanaIngresoCliente extends JPanel {
 		btnSalir.setBounds(20, 20, 60, 40);
 		btnSalir.setContentAreaFilled(false);
 		btnSalir.setBorder(BorderFactory.createLineBorder(Color.GREEN, 0, true));
-		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/exitArrow.png");
+		ImageIcon imagenSalir = new ImageIcon("./src/main/resources/img/exitArrow.png");
 
 		btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
 				btnSalir.getHeight(), Image.SCALE_SMOOTH)));
 
 		pnlPrincipal.add(btnSalir);
 
-		btnOlvidoContraseña = new JButton();
+		btnOlvidoContrasena = new JButton();
 
-		btnOlvidoContraseña.setBounds(20, 600, 300, 40);
-		btnOlvidoContraseña.setContentAreaFilled(false);
-		btnOlvidoContraseña.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
-		btnOlvidoContraseña.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		ImageIcon imagenOlvidoContraseña = new ImageIcon(
-				"cine_distrito/src/main/resources/img/imgOlvidoContraseña.png");
+		btnOlvidoContrasena.setBounds(20, 600, 300, 40);
+		btnOlvidoContrasena.setContentAreaFilled(false);
+		btnOlvidoContrasena.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
+		btnOlvidoContrasena.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		ImageIcon imagenOlvidoContrasena = new ImageIcon(
+				"./src/main/resources/img/imgOlvidoContrasena.png");
 
-		btnOlvidoContraseña.setIcon(
-				new ImageIcon(imagenOlvidoContraseña.getImage().getScaledInstance(btnOlvidoContraseña.getWidth(),
-						btnOlvidoContraseña.getHeight(), Image.SCALE_SMOOTH)));
+		btnOlvidoContrasena.setIcon(
+				new ImageIcon(imagenOlvidoContrasena.getImage().getScaledInstance(btnOlvidoContrasena.getWidth(),
+						btnOlvidoContrasena.getHeight(), Image.SCALE_SMOOTH)));
 
-		pnlPrincipal.add(btnOlvidoContraseña);
+		pnlPrincipal.add(btnOlvidoContrasena);
 
 		btnRegistrarUsuario = new JButton();
 		btnRegistrarUsuario.setBounds(370, 600, 300, 40);
@@ -113,7 +113,7 @@ public class VentanaIngresoCliente extends JPanel {
 		btnRegistrarUsuario.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
 		btnRegistrarUsuario.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		ImageIcon imagenRegistrarUsuario = new ImageIcon(
-				"cine_distrito/src/main/resources/img/imgRegistrarUsuario.png");
+				"./src/main/resources/img/imgRegistrarUsuario.png");
 
 		btnRegistrarUsuario.setIcon(
 				new ImageIcon(imagenRegistrarUsuario.getImage().getScaledInstance(btnRegistrarUsuario.getWidth(),
@@ -149,26 +149,26 @@ public class VentanaIngresoCliente extends JPanel {
 
 		pnlPrincipal.add(pnlNombre);
 
-		JPanel pnlContraseña = new JPanel();
-		pnlContraseña.setLayout(null);
-		pnlContraseña.setBounds(150, 350, 400, 130);
-		pnlContraseña.setOpaque(false);
-		pnlContraseña.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
+		JPanel pnlContrasena = new JPanel();
+		pnlContrasena.setLayout(null);
+		pnlContrasena.setBounds(150, 350, 400, 130);
+		pnlContrasena.setOpaque(false);
+		pnlContrasena.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
 
-		JLabel lblContraseña = new JLabel();
-		lblContraseña.setBounds(140, 20, 150, 30);
-		lblContraseña.setText("Contraseña");
-		lblContraseña.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
+		JLabel lblContrasena = new JLabel();
+		lblContrasena.setBounds(140, 20, 150, 30);
+		lblContrasena.setText("Contrasena");
+		lblContrasena.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 
-		pnlContraseña.add(lblContraseña);
+		pnlContrasena.add(lblContrasena);
 
-		pwdContraseña = new JPasswordField();
-		pwdContraseña.setBounds(100, 75, 200, 30);
-		pwdContraseña.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
+		pwdContrasena = new JPasswordField();
+		pwdContrasena.setBounds(100, 75, 200, 30);
+		pwdContrasena.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 
-		pnlContraseña.add(pwdContraseña);
+		pnlContrasena.add(pwdContrasena);
 
-		pnlPrincipal.add(pnlContraseña);
+		pnlPrincipal.add(pnlContrasena);
 
 	}
 
@@ -183,7 +183,7 @@ public class VentanaIngresoCliente extends JPanel {
 		btnIngreso = new JButton();
 		btnIngreso.setBounds(280, 500, 134, 54);
 		btnIngreso.setContentAreaFilled(false);
-		ImageIcon imagenIngreso = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnIngreso.png");
+		ImageIcon imagenIngreso = new ImageIcon("./src/main/resources/img/imgBtnIngreso.png");
 		btnIngreso.setIcon(new ImageIcon(imagenIngreso.getImage().getScaledInstance(btnIngreso.getWidth(),
 				btnIngreso.getHeight(), Image.SCALE_SMOOTH)));
 
@@ -193,27 +193,27 @@ public class VentanaIngresoCliente extends JPanel {
 		btnSalir.setBounds(20, 20, 60, 40);
 		btnSalir.setContentAreaFilled(false);
 		btnSalir.setBorder(BorderFactory.createLineBorder(Color.GREEN, 0, true));
-		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/exitArrow.png");
+		ImageIcon imagenSalir = new ImageIcon("./src/main/resources/img/exitArrow.png");
 
 		btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
 				btnSalir.getHeight(), Image.SCALE_SMOOTH)));
 
 		pnlPrincipal.add(btnSalir);
 
-		btnOlvidoContraseña = new JButton();
+		btnOlvidoContrasena = new JButton();
 
-		btnOlvidoContraseña.setBounds(20, 600, 300, 40);
-		btnOlvidoContraseña.setContentAreaFilled(false);
-		btnOlvidoContraseña.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
-		btnOlvidoContraseña.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		ImageIcon imagenOlvidoContraseña = new ImageIcon(
-				"cine_distrito/src/main/resources/img/imgOlvidoContraseña.png");
+		btnOlvidoContrasena.setBounds(20, 600, 300, 40);
+		btnOlvidoContrasena.setContentAreaFilled(false);
+		btnOlvidoContrasena.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
+		btnOlvidoContrasena.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		ImageIcon imagenOlvidoContrasena = new ImageIcon(
+				"./src/main/resources/img/imgOlvidoContrasena.png");
 
-		btnOlvidoContraseña.setIcon(
-				new ImageIcon(imagenOlvidoContraseña.getImage().getScaledInstance(btnOlvidoContraseña.getWidth(),
-						btnOlvidoContraseña.getHeight(), Image.SCALE_SMOOTH)));
+		btnOlvidoContrasena.setIcon(
+				new ImageIcon(imagenOlvidoContrasena.getImage().getScaledInstance(btnOlvidoContrasena.getWidth(),
+						btnOlvidoContrasena.getHeight(), Image.SCALE_SMOOTH)));
 
-		pnlPrincipal.add(btnOlvidoContraseña);
+		pnlPrincipal.add(btnOlvidoContrasena);
 
 		btnRegistrarUsuario = new JButton();
 		btnRegistrarUsuario.setBounds(370, 600, 300, 40);
@@ -221,7 +221,7 @@ public class VentanaIngresoCliente extends JPanel {
 		btnRegistrarUsuario.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
 		btnRegistrarUsuario.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		ImageIcon imagenRegistrarUsuario = new ImageIcon(
-				"cine_distrito/src/main/resources/img/imgRegistrarUsuario.png");
+				"./src/main/resources/img/imgRegistrarUsuario.png");
 
 		btnRegistrarUsuario.setIcon(
 				new ImageIcon(imagenRegistrarUsuario.getImage().getScaledInstance(btnRegistrarUsuario.getWidth(),
@@ -263,28 +263,28 @@ public class VentanaIngresoCliente extends JPanel {
 
 	}
 
-	private void crearPanelContraseña() {
+	private void crearPanelContrasena() {
 
-		JPanel pnlContraseña = new JPanel();
-		pnlContraseña.setLayout(null);
-		pnlContraseña.setBounds(150, 350, 400, 130);
-		pnlContraseña.setOpaque(false);
-		pnlContraseña.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
+		JPanel pnlContrasena = new JPanel();
+		pnlContrasena.setLayout(null);
+		pnlContrasena.setBounds(150, 350, 400, 130);
+		pnlContrasena.setOpaque(false);
+		pnlContrasena.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
 
-		JLabel lblContraseña = new JLabel();
-		lblContraseña.setBounds(140, 20, 150, 30);
-		lblContraseña.setText("Contraseña");
-		lblContraseña.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
+		JLabel lblContrasena = new JLabel();
+		lblContrasena.setBounds(140, 20, 150, 30);
+		lblContrasena.setText("Contrasena");
+		lblContrasena.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 
-		pnlContraseña.add(lblContraseña);
+		pnlContrasena.add(lblContrasena);
 
-		pwdContraseña = new JPasswordField();
-		pwdContraseña.setBounds(100, 75, 200, 30);
-		pwdContraseña.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
+		pwdContrasena = new JPasswordField();
+		pwdContrasena.setBounds(100, 75, 200, 30);
+		pwdContrasena.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 
-		pnlContraseña.add(pwdContraseña);
+		pnlContrasena.add(pwdContrasena);
 
-		pnlPrincipal.add(pnlContraseña);
+		pnlPrincipal.add(pnlContrasena);
 
 	}
 
@@ -350,11 +350,11 @@ public class VentanaIngresoCliente extends JPanel {
 		return btnRegistrarUsuario;
 	}
 	/**
-	 * getter boton olvido de contraseña
+	 * getter boton olvido de contrasena
 	 * @return JButton
 	 */
-	public JButton getBtnOlvidoContraseña() {
-		return btnOlvidoContraseña;
+	public JButton getBtnOlvidoContrasena() {
+		return btnOlvidoContrasena;
 	}
 	/**
 	 * getter texto del campo de correo
@@ -379,18 +379,18 @@ public class VentanaIngresoCliente extends JPanel {
 		txtCorreo.setText(n);
 	}
 	/**
-	 * getter campo de la contraseña
+	 * getter campo de la contrasena
 	 * @return JPasswordField
 	 */
-	public JPasswordField getPwdContraseña() {
-		return pwdContraseña;
+	public JPasswordField getPwdContrasena() {
+		return pwdContrasena;
 	}
 	/**
-	 * setter campo de la contraseña
+	 * setter campo de la contrasena
 	 * @param n String
 	 */
-	public void setPwdContraseña(String n) {
-		pwdContraseña.setText(n);
+	public void setPwdContrasena(String n) {
+		pwdContrasena.setText(n);
 	}
 
 }

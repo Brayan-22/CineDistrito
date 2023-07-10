@@ -58,7 +58,7 @@ public class singletonConexion {
     /**
      * 
      * @param password 
-     * setter contraseña para la conexion a la base de datos
+     * setter contrasena para la conexion a la base de datos
      */
     public void setPassword(String password) {
         this.password = password;

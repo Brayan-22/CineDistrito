@@ -41,9 +41,9 @@ public class VentanaRegistroCliente extends JPanel {
          */
 	private JTextField txtCorreo;
         /**
-         * campo de texto contraseña
+         * campo de texto contrasena
          */
-	private JTextField txtContraseña;
+	private JTextField txtContrasena;
         /**
          * campo de texto documento
          */
@@ -91,7 +91,7 @@ public class VentanaRegistroCliente extends JPanel {
 		btnSalir.setBounds(20, 20, 60, 40);
 		btnSalir.setContentAreaFilled(false);
 		btnSalir.setBorder(BorderFactory.createLineBorder(Color.GREEN, 0, true));
-		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/exitArrow.png");
+		ImageIcon imagenSalir = new ImageIcon("./src/main/resources/img/exitArrow.png");
 
 		btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
 				btnSalir.getHeight(), Image.SCALE_SMOOTH)));
@@ -110,7 +110,7 @@ public class VentanaRegistroCliente extends JPanel {
 		btnIngreso = new JButton();
 		btnIngreso.setBounds(280, 580, 134, 54);
 		btnIngreso.setContentAreaFilled(false);
-		ImageIcon imagenIngreso = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnRegistro.png");
+		ImageIcon imagenIngreso = new ImageIcon("./src/main/resources/img/imgBtnRegistro.png");
 		btnIngreso.setIcon(new ImageIcon(imagenIngreso.getImage().getScaledInstance(btnIngreso.getWidth(),
 				btnIngreso.getHeight(), Image.SCALE_SMOOTH)));
 		btnIngreso.setEnabled(false);
@@ -162,18 +162,18 @@ public class VentanaRegistroCliente extends JPanel {
 
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-		JLabel lblContraseña = new JLabel();
-		lblContraseña.setText("Contraseña: ");
-		lblContraseña.setBounds(400, 210, 150, 30);
-		lblContraseña.setFont(new Font("Comic Sans MS", Font.ITALIC, 16));
+		JLabel lblContrasena = new JLabel();
+		lblContrasena.setText("Contrasena: ");
+		lblContrasena.setBounds(400, 210, 150, 30);
+		lblContrasena.setFont(new Font("Comic Sans MS", Font.ITALIC, 16));
 
-		pnlPrincipal.add(lblContraseña);
+		pnlPrincipal.add(lblContrasena);
 
-		txtContraseña = new JTextField();
-		txtContraseña.setBounds(400, 240, 200, 30);
-		txtContraseña.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
+		txtContrasena = new JTextField();
+		txtContrasena.setBounds(400, 240, 200, 30);
+		txtContrasena.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 
-		pnlPrincipal.add(txtContraseña);
+		pnlPrincipal.add(txtContrasena);
 
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -206,7 +206,7 @@ public class VentanaRegistroCliente extends JPanel {
 				+ "autorizo expresamente a Cine Distrito, de manera directa, o a través de terceros "
 				+ "designados, para almacenar, consultar, procesar y en general, para dar tratamiento "
 				+ "a la información personal que suministre, y para ser incluido en sus bases de datos, "
-				+ "recibir información de la Compañía, de conformidad con las políticas de privacidad "
+				+ "recibir información de la Companía, de conformidad con las políticas de privacidad "
 				+ "y manejo de información.</html>");
 		pnlPrincipal.add(cbxAutorizacion);
 
@@ -252,11 +252,11 @@ public class VentanaRegistroCliente extends JPanel {
 		return txtCorreo;
 	}
 	/**
-	 * getter campo de texto contraseña
+	 * getter campo de texto contrasena
 	 * @return JTextField
 	 */
-	public JTextField getTxtContraseña() {
-		return txtContraseña;
+	public JTextField getTxtContrasena() {
+		return txtContrasena;
 	}
 	/**
 	 * getter campo de texto documento

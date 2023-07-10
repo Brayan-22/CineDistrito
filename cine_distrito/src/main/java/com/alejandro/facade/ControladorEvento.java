@@ -54,7 +54,7 @@ public class ControladorEvento implements ActionListener, KeyListener {
 		if (e.getSource() == interfaz.getVentanaCartelera().getBtnSalir()) {
 
 			interfaz.getVentanaInicio().getFTxtNombre().setText("");
-			interfaz.getVentanaInicio().getPwdContraseña().setText("");
+			interfaz.getVentanaInicio().getPwdContrasena().setText("");
 			interfaz.getFachada().cambiarPanel(interfaz.getVentanaCartelera(), interfaz.getVentanaInicio());
 		}
 
@@ -139,10 +139,10 @@ public class ControladorEvento implements ActionListener, KeyListener {
 					interfaz.getVentanaIngresoCliente());
 
 		}
-		if (e.getSource() == interfaz.getVentanaIngresoCliente().getBtnOlvidoContraseña()) {
+		if (e.getSource() == interfaz.getVentanaIngresoCliente().getBtnOlvidoContrasena()) {
 
-			interfaz.getFachada().ingresoIngresoClienteRecuperarContraseña(interfaz.getVentanaIngresoCliente(),
-					interfaz.getVentanaRecuperarContraseña());
+			interfaz.getFachada().ingresoIngresoClienteRecuperarContrasena(interfaz.getVentanaIngresoCliente(),
+					interfaz.getVentanaRecuperarContrasena());
 
 		}
 		if (e.getSource() == interfaz.getVentanaIngresoCliente().getBtnSalir()) {
@@ -191,17 +191,17 @@ public class ControladorEvento implements ActionListener, KeyListener {
 					interfaz.getVentanaIngresoCliente());
 		}
 
-		// // // // // // // // // VENTANA RECUPERAR CONTRASEÑA// // // // // // // //
+		// // // // // // // // // VENTANA RECUPERAR CONTRASEnA// // // // // // // //
 		// //
 
-		if (e.getSource() == interfaz.getVentanaRecuperarContraseña().getBtnSalir()) {
+		if (e.getSource() == interfaz.getVentanaRecuperarContrasena().getBtnSalir()) {
 
-			interfaz.getFachada().regresoRecuperarContraseñaIngresoCliente(interfaz.getVentanaIngresoCliente(),
-					interfaz.getVentanaRecuperarContraseña());
+			interfaz.getFachada().regresoRecuperarContrasenaIngresoCliente(interfaz.getVentanaIngresoCliente(),
+					interfaz.getVentanaRecuperarContrasena());
 		}
-		if (e.getSource() == interfaz.getVentanaRecuperarContraseña().getBtnContinue()) {
+		if (e.getSource() == interfaz.getVentanaRecuperarContrasena().getBtnContinue()) {
 
-			interfaz.getFachada().recuperarContraseña(interfaz.getVentanaRecuperarContraseña());
+			interfaz.getFachada().recuperarContrasena(interfaz.getVentanaRecuperarContrasena());
 		}
 
 		// // // // // // // // // VENTANA SNACKS // // // // // // // // //
@@ -268,8 +268,8 @@ public class ControladorEvento implements ActionListener, KeyListener {
 			interfaz.getFachada().ingresoAdminRegistro(interfaz.getVentanaAdmin(),
 					interfaz.getVentanaRegistroUsuario());
 		}
-		if (e.getSource() == interfaz.getVentanaAdmin().getBtnCambiarContraseña()) {
-			interfaz.getFachada().ingresoAdminContraseña(interfaz.getVentanaEstablecerContraseña(),
+		if (e.getSource() == interfaz.getVentanaAdmin().getBtnCambiarContrasena()) {
+			interfaz.getFachada().ingresoAdminContrasena(interfaz.getVentanaEstablecerContrasena(),
 					interfaz.getVentanaAdmin());
 		}
 		if (e.getSource() == interfaz.getVentanaAdmin().getBtnCerrarSesion()) {
@@ -277,17 +277,17 @@ public class ControladorEvento implements ActionListener, KeyListener {
 			interfaz.getFachada().cerrarSesionAdmin(interfaz.getVentanaInicio(), interfaz.getVentanaAdmin());
 		}
 
-		// // // // // // // // // // // // // // // // VENTANA ESTABLECER CONTRASEÑA //
+		// // // // // // // // // // // // // // // // VENTANA ESTABLECER CONTRASEnA //
 		// // // // // // // // // // // // // // // //
 
-		if (e.getSource() == interfaz.getVentanaEstablecerContraseña().getBtnSalir()) {
+		if (e.getSource() == interfaz.getVentanaEstablecerContrasena().getBtnSalir()) {
 
-			interfaz.getFachada().regresoContraseñaAdmin(interfaz.getVentanaEstablecerContraseña(),
+			interfaz.getFachada().regresoContrasenaAdmin(interfaz.getVentanaEstablecerContrasena(),
 					interfaz.getVentanaAdmin());
 		}
-		if (e.getSource() == interfaz.getVentanaEstablecerContraseña().getBtnContinue()) {
+		if (e.getSource() == interfaz.getVentanaEstablecerContrasena().getBtnContinue()) {
 
-			interfaz.getFachada().establecerContraseñaExitoso(interfaz.getVentanaEstablecerContraseña());
+			interfaz.getFachada().establecerContrasenaExitoso(interfaz.getVentanaEstablecerContrasena());
 		}
 
 		// // // // // // // // // // // // // // // // VENTANA AGREGAR EMPLEADO // //
@@ -328,7 +328,7 @@ public class ControladorEvento implements ActionListener, KeyListener {
 
 		}
 
-		if (evt.getSource() == interfaz.getVentanaRecuperarContraseña().getTxtDocumento()) {
+		if (evt.getSource() == interfaz.getVentanaRecuperarContrasena().getTxtDocumento()) {
 			char c = evt.getKeyChar();
 			if (c < '0' || c > '9')
 				evt.consume();

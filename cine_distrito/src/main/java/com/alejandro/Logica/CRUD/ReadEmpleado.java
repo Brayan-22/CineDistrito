@@ -35,7 +35,7 @@ public class ReadEmpleado implements Read{
     @Override
     public ArrayList operacionCrud() {
         array = new ArrayList();
-        String sql="select codigoempleado,contraseña from empleado where codigoempleado='"+codigoempleado+"'";
+        String sql="select codigoempleado,contrasena from empleado where codigoempleado='"+codigoempleado+"'";
         conexion=singletonConexion.getConexion();
         conexion.Conectar();
         try {

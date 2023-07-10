@@ -11,15 +11,15 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 /**
- * Panel para la ventana de establecer contraseña
+ * Panel para la ventana de establecer contrasena
  * @author alejandro
  * @version 1.0
  */
 public class VentanaEstablecerContrasena extends JPanel {
         /**
-         * campo texto contraseña
+         * campo texto contrasena
          */
-	private JTextField txtContraseña;
+	private JTextField txtContrasena;
         /**
          * campo texto codigo
          */
@@ -33,9 +33,9 @@ public class VentanaEstablecerContrasena extends JPanel {
          */
 	private JButton btnSalir;
         /**
-         * label contraseña
+         * label contrasena
          */
-	private JLabel lblContraseña;
+	private JLabel lblContrasena;
         /**
          * label codigo
          */
@@ -57,7 +57,7 @@ public class VentanaEstablecerContrasena extends JPanel {
 		btnContinue = new JButton();
 		btnContinue.setBounds(280, 520, 134, 54);
 		btnContinue.setContentAreaFilled(false);
-		ImageIcon imagenIngreso = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnContinue.png");
+		ImageIcon imagenIngreso = new ImageIcon("./src/main/resources/img/imgBtnContinue.png");
 		btnContinue.setIcon(new ImageIcon(imagenIngreso.getImage().getScaledInstance(btnContinue.getWidth(),
 				btnContinue.getHeight(), Image.SCALE_SMOOTH)));
 
@@ -67,19 +67,19 @@ public class VentanaEstablecerContrasena extends JPanel {
 		btnSalir.setBounds(20, 20, 60, 40);
 		btnSalir.setContentAreaFilled(false);
 		btnSalir.setBorder(BorderFactory.createLineBorder(Color.GREEN, 0, true));
-		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/exitArrow.png");
+		ImageIcon imagenSalir = new ImageIcon("./src/main/resources/img/exitArrow.png");
 
 		btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
 				btnSalir.getHeight(), Image.SCALE_SMOOTH)));
 
 		pnlPrincipal.add(btnSalir);
 
-		lblContraseña = new JLabel();
-		lblContraseña.setText("Establecer Contraseña");
-		lblContraseña.setBounds(130, 40, 500, 100);
-		lblContraseña.setFont(new Font("Comic Sans MS", Font.BOLD, 44));
+		lblContrasena = new JLabel();
+		lblContrasena.setText("Establecer Contrasena");
+		lblContrasena.setBounds(130, 40, 500, 100);
+		lblContrasena.setFont(new Font("Comic Sans MS", Font.BOLD, 44));
 
-		pnlPrincipal.add(lblContraseña);
+		pnlPrincipal.add(lblContrasena);
 
 		JPanel pnlCodigo = new JPanel();
 		pnlCodigo.setLayout(null);
@@ -102,26 +102,26 @@ public class VentanaEstablecerContrasena extends JPanel {
 
 		pnlPrincipal.add(pnlCodigo);
 
-		JPanel pnlContraseña = new JPanel();
-		pnlContraseña.setLayout(null);
-		pnlContraseña.setBounds(150, 350, 400, 130);
-		pnlContraseña.setOpaque(false);
-		pnlContraseña.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
+		JPanel pnlContrasena = new JPanel();
+		pnlContrasena.setLayout(null);
+		pnlContrasena.setBounds(150, 350, 400, 130);
+		pnlContrasena.setOpaque(false);
+		pnlContrasena.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
 
-		lblContraseña = new JLabel();
-		lblContraseña.setBounds(110, 20, 200, 30);
-		lblContraseña.setText("Nueva Contraseña");
-		lblContraseña.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
+		lblContrasena = new JLabel();
+		lblContrasena.setBounds(110, 20, 200, 30);
+		lblContrasena.setText("Nueva Contrasena");
+		lblContrasena.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 
-		pnlContraseña.add(lblContraseña);
+		pnlContrasena.add(lblContrasena);
 
-		txtContraseña = new JTextField();
-		txtContraseña.setBounds(100, 75, 200, 30);
-		txtContraseña.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
+		txtContrasena = new JTextField();
+		txtContrasena.setBounds(100, 75, 200, 30);
+		txtContrasena.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 
-		pnlContraseña.add(txtContraseña);
+		pnlContrasena.add(txtContrasena);
 
-		pnlPrincipal.add(pnlContraseña);
+		pnlPrincipal.add(pnlContrasena);
 
 	}
 
@@ -140,11 +140,11 @@ public class VentanaEstablecerContrasena extends JPanel {
 		return btnSalir;
 	}
 	/**
-	 * getter campo de texto de la contraseña
+	 * getter campo de texto de la contrasena
 	 * @return JTextField
 	 */
-	public JTextField getFTxtContraseña() {
-		return txtContraseña;
+	public JTextField getFTxtContrasena() {
+		return txtContrasena;
 	}
 	/**
 	 * getter campo de texto del codigo
@@ -154,11 +154,11 @@ public class VentanaEstablecerContrasena extends JPanel {
 		return txtCodigo;
 	}
 	/**
-	 * getter texto del campo de la contraseña
+	 * getter texto del campo de la contrasena
 	 * @return String
 	 */
-	public String getTxtContraseña() {
-		return txtContraseña.getText();
+	public String getTxtContrasena() {
+		return txtContrasena.getText();
 	}
 	/**
 	 * getter texto del campo del codigo

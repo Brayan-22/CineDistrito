@@ -59,7 +59,7 @@ public class VentanaCartelera extends JPanel{
 		btnSalir.setBounds(20, 20, 60, 40);
 		btnSalir.setContentAreaFilled(false);
 		btnSalir.setBorder(BorderFactory.createLineBorder(Color.BLACK, 0, true));
-		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/exitArrow.png");
+		ImageIcon imagenSalir = new ImageIcon("./src/main/resources/img/exitArrow.png");
 
 		btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
 				btnSalir.getHeight(), Image.SCALE_SMOOTH)));
@@ -101,7 +101,7 @@ public class VentanaCartelera extends JPanel{
 		peliculaEncanto = new JButton();
 		peliculaEncanto.setBounds(50, 10, 150, 225);
 		peliculaEncanto.setContentAreaFilled(false);
-		ImageIcon imagenEncanto = new ImageIcon("cine_distrito/src/main/resources/img/Encanto.jpg");
+		ImageIcon imagenEncanto = new ImageIcon("./src/main/resources/img/Encanto.jpg");
 
 		peliculaEncanto.setIcon(new ImageIcon(imagenEncanto.getImage().getScaledInstance(peliculaEncanto.getWidth(),
 				peliculaEncanto.getHeight(), Image.SCALE_SMOOTH)));
@@ -118,7 +118,7 @@ public class VentanaCartelera extends JPanel{
 		peliculaMoonfall = new JButton();
 		peliculaMoonfall.setBounds(250, 10, 150, 225);
 		peliculaMoonfall.setContentAreaFilled(false);
-		ImageIcon imagenMoonfall = new ImageIcon("cine_distrito/src/main/resources/img/Moonfall.jpg");
+		ImageIcon imagenMoonfall = new ImageIcon("./src/main/resources/img/Moonfall.jpg");
 
 		peliculaMoonfall.setIcon(new ImageIcon(imagenMoonfall.getImage().getScaledInstance(peliculaMoonfall.getWidth(),
 				peliculaMoonfall.getHeight(), Image.SCALE_SMOOTH)));
@@ -136,7 +136,7 @@ public class VentanaCartelera extends JPanel{
 		peliculaPaseo6 = new JButton();
 		peliculaPaseo6.setBounds(450, 10, 150, 225);
 		peliculaPaseo6.setContentAreaFilled(false);
-		ImageIcon imagenPaseo6 = new ImageIcon("cine_distrito/src/main/resources/img/Paseo6.jpg");
+		ImageIcon imagenPaseo6 = new ImageIcon("./src/main/resources/img/Paseo6.jpg");
 
 		peliculaPaseo6.setIcon(new ImageIcon(imagenPaseo6.getImage().getScaledInstance(peliculaPaseo6.getWidth(),
 				peliculaPaseo6.getHeight(), Image.SCALE_SMOOTH)));
@@ -154,7 +154,7 @@ public class VentanaCartelera extends JPanel{
 		peliculaScream = new JButton();
 		peliculaScream.setBounds(650, 10, 150, 225);
 		peliculaScream.setContentAreaFilled(false);
-		ImageIcon imagenScream = new ImageIcon("cine_distrito/src/main/resources/img/Scream.jpg");
+		ImageIcon imagenScream = new ImageIcon("./src/main/resources/img/Scream.jpg");
 
 		peliculaScream.setIcon(new ImageIcon(imagenScream.getImage().getScaledInstance(peliculaScream.getWidth(),
 				peliculaScream.getHeight(), Image.SCALE_SMOOTH)));
@@ -172,7 +172,7 @@ public class VentanaCartelera extends JPanel{
 		peliculaSpiderman = new JButton();
 		peliculaSpiderman.setBounds(850, 10, 150, 225);
 		peliculaSpiderman.setContentAreaFilled(false);
-		ImageIcon imagenSpiderman = new ImageIcon("cine_distrito/src/main/resources/img/Spiderman.jpg");
+		ImageIcon imagenSpiderman = new ImageIcon("./src/main/resources/img/Spiderman.jpg");
 
 		peliculaSpiderman.setIcon(new ImageIcon(imagenSpiderman.getImage().getScaledInstance(peliculaSpiderman.getWidth(),
 				peliculaSpiderman.getHeight(), Image.SCALE_SMOOTH)));

@@ -13,24 +13,24 @@ public class UpdateEmpleado implements Update{
     singletonConexion conexion;
     private PreparedStatement pst;
     private final String codigoEmpleado;
-    private final String nuevaContraseña;
+    private final String nuevaContrasena;
     /**
      * Constructor update empleado 
      * @param codigoEmpleado define el codigo del empleado a modificar
-     * @param nuevaContraseña define la nueva contraseña del empleado
+     * @param nuevaContrasena define la nueva contrasena del empleado
      */
-    public UpdateEmpleado(String codigoEmpleado,String nuevaContraseña) {
+    public UpdateEmpleado(String codigoEmpleado,String nuevaContrasena) {
         this.codigoEmpleado=codigoEmpleado;
-        this.nuevaContraseña=nuevaContraseña;
+        this.nuevaContrasena=nuevaContrasena;
     }
     @Override
     public void operacionCrud(){
-        String sql="update empleado set contraseña=? where codigoempleado=?";
+        String sql="update empleado set contrasena=? where codigoempleado=?";
         conexion=singletonConexion.getConexion();
         conexion.Conectar();
         try {
             pst=conexion.getConnection().prepareStatement(sql);
-            pst.setString(1, nuevaContraseña);
+            pst.setString(1, nuevaContrasena);
             pst.setString(2, codigoEmpleado);
             pst.execute();
             conexion.desconectar();

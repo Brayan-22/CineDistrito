@@ -70,7 +70,7 @@ public class Fachada {
 	 */
 	// de ventana inicio a cartelera
 	public void cambiarPanel(VentanaInicio vi, VentanaCartelera vc) {
-		String myPass = String.valueOf(vi.getPwdContraseña().getPassword());
+		String myPass = String.valueOf(vi.getPwdContrasena().getPassword());
 		String myName = vi.getTxtNombre();
 		miFabrica = new FabricaEmpleado(myName);
 		read = miFabrica.readRegistro();
@@ -82,7 +82,7 @@ public class Fachada {
 			JOptionPane.showMessageDialog(null, "Este empleado no se encuentra registrado");
 		} else if (myName.equals(arrayTemp.get(0)) && myPass.equals(arrayTemp.get(1))) {
 			System.out.println("Usuario: " + myName);
-			System.out.println("Contraseña: " + myPass);
+			System.out.println("Contrasena: " + myPass);
 			vi.setVisible(false);
 			vc.setVisible(true);
 		} else {
@@ -142,7 +142,7 @@ public class Fachada {
 				vp.getLblTitulo().setText("Encanto");
 				vp.getTxtDescripcion()
 						.setText("cuenta la historia de los Madrigal, una familia ex-traordinaria que vive escondida "
-								+ "en las montañas de Colombia, en una casa mágica, en un pueblo vi- brante, en un lugar maravilloso "
+								+ "en las montanas de Colombia, en una casa mágica, en un pueblo vi- brante, en un lugar maravilloso "
 								+ "conocido como un Encanto.");
 
 				ImageIcon imgEdadEncanto = new ImageIcon("./img/imgEdadTodos.png");
@@ -214,7 +214,7 @@ public class Fachada {
 				vp.getLblTitulo().setFont(new Font("Comic Sans MS", 3, 49));
 				vp.getTxtDescripcion()
 						.setText("La Excursión de 11 es el paseo donde todo puede pasar, pero excursión de 11 "
-								+ "con los papás, eso sí es el colmo. Y como Álvaro Castaño sabe que es mejor la seguridad "
+								+ "con los papás, eso sí es el colmo. Y como Álvaro Castano sabe que es mejor la seguridad "
 								+ "que la policía, decide viajar con su familia para vigilar a su hija Sarita, sin embargo, "
 								+ "su suegra, Raquel, no está dispuesta a permitirlo y también se embarca en el plan.");
 
@@ -365,14 +365,14 @@ public class Fachada {
 	 */
 	public void verificacionCliente(VentanaIngresoCliente vic, VentanaCompraSilla vcs, VentanaPelicula vp) {
 
-		if (verificar.esCorreo(vic.getTxtCorreo()) && !vic.getPwdContraseña().getText().isEmpty()) {
+		if (verificar.esCorreo(vic.getTxtCorreo()) && !vic.getPwdContrasena().getText().isEmpty()) {
 			miFabrica = new FabricaCliente(vic.getTxtCorreo());
 			read = miFabrica.readRegistro();
 			ArrayList arrayTemp = read.operacionCrud();
 
 			System.out.println("\nValidando información de Correo....");
 			if (vic.getTxtCorreo().equals(arrayTemp.get(1))
-					&& vic.getPwdContraseña().getText().equals(arrayTemp.get(2))) {
+					&& vic.getPwdContrasena().getText().equals(arrayTemp.get(2))) {
 				System.err.println("es correcto");
 				vcs.setLblCine((String) vp.getCmbCinesDisponibles().getSelectedItem());
 				vcs.setLblPelicula(vp.getLblTitulo().getText());
@@ -390,7 +390,7 @@ public class Fachada {
 			JOptionPane.showMessageDialog(null, "Porfavor ingrese nuevamente los datos", "ERROR",
 					JOptionPane.ERROR_MESSAGE);
 			vic.setTxtCorreo("");
-			vic.setPwdContraseña("");
+			vic.setPwdContrasena("");
 
 		}
 
@@ -402,9 +402,9 @@ public class Fachada {
 	 * @param vic VentanaIngresoCliente
 	 * @param vrc VentanaRecuperarContrasena
 	 */
-	public void ingresoIngresoClienteRecuperarContraseña(VentanaIngresoCliente vic, VentanaRecuperarContrasena vrc) {
+	public void ingresoIngresoClienteRecuperarContrasena(VentanaIngresoCliente vic, VentanaRecuperarContrasena vrc) {
 
-		System.out.println("Ingresó a Ventana Recuperar Contraseña");
+		System.out.println("Ingresó a Ventana Recuperar Contrasena");
 		vic.setVisible(false);
 		vrc.setVisible(true);
 
@@ -553,7 +553,7 @@ public class Fachada {
 		if (!Verificar.esCorreo(vrc.getTxtCorreo().getText())) {
 			JOptionPane.showMessageDialog(null, "Ingrese un formato de correo válido");
 			vrc.getTxtCorreo().setText("");
-		} else if (vrc.getTxtApellido().getText().isEmpty() || vrc.getTxtContraseña().getText().isEmpty()
+		} else if (vrc.getTxtApellido().getText().isEmpty() || vrc.getTxtContrasena().getText().isEmpty()
 				|| vrc.getTxtDocumento().getText().isEmpty() || vrc.getTxtNombre().getText().isEmpty()) {
 
 			JOptionPane.showMessageDialog(null, "Porfavor no deje espacios en blanco", "Espacios en blanco",
@@ -567,7 +567,7 @@ public class Fachada {
 			System.out.println("Se registró con éxito!");
 			// Se agrega el Cliente a la BDD
 			miFabrica = new FabricaCliente(Integer.valueOf(vrc.getTxtDocumento().getText()),
-					vrc.getTxtNombre().getText(), vrc.getTxtApellido().getText(), vrc.getTxtContraseña().getText(),
+					vrc.getTxtNombre().getText(), vrc.getTxtApellido().getText(), vrc.getTxtContrasena().getText(),
 					vrc.getTxtCorreo().getText());
 			create = miFabrica.crearRegistro();
 			create.operacionCrud();
@@ -576,7 +576,7 @@ public class Fachada {
 			vrc.getTxtNombre().setText("");
 			vrc.getTxtDocumento().setText("");
 			vrc.getTxtCorreo().setText("");
-			vrc.getTxtContraseña().setText("");
+			vrc.getTxtContrasena().setText("");
 		}
 
 	}
@@ -608,18 +608,18 @@ public class Fachada {
 
 		System.out.println("Regresó a ventana Ingreso Usuario");
 		vrc.setVisible(false);
-		vic.getPwdContraseña().setText("");
+		vic.getPwdContrasena().setText("");
 		vic.getFtxtCorreo().setText("");
 		vic.setVisible(true);
 
 	}
 
 	/**
-	 * metodo que gestiona el cambio de contraseña de un cliente
+	 * metodo que gestiona el cambio de contrasena de un cliente
 	 * 
 	 * @param vrc VentanaRecuperarContrasena
 	 */
-	public void recuperarContraseña(VentanaRecuperarContrasena vrc) {
+	public void recuperarContrasena(VentanaRecuperarContrasena vrc) {
 
 		if (Verificar.esCorreo(vrc.getTxtCorreo()) && !vrc.getTxtDocumento().getText().isEmpty()) {
 			miFabrica = new FabricaCliente(vrc.getTxtCorreo());
@@ -630,7 +630,7 @@ public class Fachada {
 				JOptionPane.showMessageDialog(null, "credenciales incorrectas");
 			} else {
 				JOptionPane.showMessageDialog(null,
-						"Usuario:" + arrayTemp.get(3) + "\nContraseña: " + arrayTemp.get(2));
+						"Usuario:" + arrayTemp.get(3) + "\nContrasena: " + arrayTemp.get(2));
 			}
 
 		} else {
@@ -644,13 +644,13 @@ public class Fachada {
 	 * metodo que cambia de panel VentanaRecuperarContrasena a VentanaIngresoCliente
 	 * 
 	 * @param vic          VentanaIngresoCliente
-	 * @param vrcontraseña VentanaRecuperarContrasena
+	 * @param vrcontrasena VentanaRecuperarContrasena
 	 */
-	public void regresoRecuperarContraseñaIngresoCliente(VentanaIngresoCliente vic,
-			VentanaRecuperarContrasena vrcontraseña) {
+	public void regresoRecuperarContrasenaIngresoCliente(VentanaIngresoCliente vic,
+			VentanaRecuperarContrasena vrcontrasena) {
 
 		System.out.println("Regresó a Ventana Ingreso");
-		vrcontraseña.setVisible(false);
+		vrcontrasena.setVisible(false);
 		vic.setVisible(true);
 
 	}
@@ -853,7 +853,7 @@ public class Fachada {
 	 */
 	public Boolean esAdmin(VentanaInicio vi) {
 
-		if (vi.getTxtNombre().equalsIgnoreCase("Admin") && vi.getTxtContraseña().equalsIgnoreCase("Admin")) {
+		if (vi.getTxtNombre().equalsIgnoreCase("Admin") && vi.getTxtContrasena().equalsIgnoreCase("Admin")) {
 
 			return true;
 		} else {
@@ -896,7 +896,7 @@ public class Fachada {
 	 * @param vec VentanaEstablecerContrasena
 	 * @param va  VentanaAdmin
 	 */
-	public void ingresoAdminContraseña(VentanaEstablecerContrasena vec, VentanaAdmin va) {
+	public void ingresoAdminContrasena(VentanaEstablecerContrasena vec, VentanaAdmin va) {
 
 		va.setVisible(false);
 		vec.setVisible(true);
@@ -915,7 +915,7 @@ public class Fachada {
 		vru.setVisible(true);
 	}
 
-	///////////////////////////////////////////// VENTANA ESTABLECER CONTRASEÑA
+	///////////////////////////////////////////// VENTANA ESTABLECER CONTRASEnA
 	///////////////////////////////////////////// ///////////////////////////////////7
 	/**
 	 * meotod que cambia de panel VentanaEstablecerContrasena a VentanaAdmin
@@ -923,7 +923,7 @@ public class Fachada {
 	 * @param vec VentanaEstablecerContrasena
 	 * @param va VentanaAdmin
 	 */
-	public void regresoContraseñaAdmin(VentanaEstablecerContrasena vec, VentanaAdmin va) {
+	public void regresoContrasenaAdmin(VentanaEstablecerContrasena vec, VentanaAdmin va) {
 
 		va.setVisible(true);
 		vec.setVisible(false);
@@ -936,9 +936,9 @@ public class Fachada {
 	 * @param vec VentanaEstablecerContrasena
 	 * @return boolean
 	 */
-	public boolean establecerContraseñaExitoso(VentanaEstablecerContrasena vec) {
+	public boolean establecerContrasenaExitoso(VentanaEstablecerContrasena vec) {
 
-		if (vec.getFTxtCodigo().getText().isEmpty() || vec.getFTxtContraseña().getText().isEmpty()) {
+		if (vec.getFTxtCodigo().getText().isEmpty() || vec.getFTxtContrasena().getText().isEmpty()) {
 
 			JOptionPane.showMessageDialog(null, "Porfavor no deje espacios en blanco", "Espacios en blanco",
 					JOptionPane.ERROR_MESSAGE);
@@ -972,7 +972,7 @@ public class Fachada {
 	 */
 	public void registroEmpleadoExitoso(VentanaRegistroUsuario vru) {
 
-		if (vru.getFTxtContraseña().getText().isEmpty() || vru.getFTxtCorreo().getText().isEmpty()
+		if (vru.getFTxtContrasena().getText().isEmpty() || vru.getFTxtCorreo().getText().isEmpty()
 				|| vru.getFTxtDocumento().getText().isEmpty() || vru.getFTxtNombre().getText().isEmpty()
 				|| vru.getFTxtTelefono().getText().isEmpty()) {
 
@@ -992,8 +992,8 @@ public class Fachada {
 			String multiplex = vru.getCmbMultiplex().getSelectedItem().toString();
 			String cedula = vru.getTxtDocumento();
 			String cargo = vru.getCmbCargo().getSelectedItem().toString();
-			String contraseña = vru.getTxtContraseña();
-			miFabrica = new FabricaEmpleado(Integer.valueOf(cedula), nombre, apellido, contraseña, telefono,
+			String contrasena = vru.getTxtContrasena();
+			miFabrica = new FabricaEmpleado(Integer.valueOf(cedula), nombre, apellido, contrasena, telefono,
 					LocalDate.now().toString(), multiplex(multiplex), cargo(cargo));
 			create = miFabrica.crearRegistro();
 
@@ -1007,7 +1007,7 @@ public class Fachada {
 			vru.getFTxtNombre().setText("");
 			vru.getFTxtCorreo().setText("");
 			vru.getFTxtTelefono().setText("");
-			vru.getFTxtContraseña().setText("");
+			vru.getFTxtContrasena().setText("");
 		}
 
 	}
@@ -1196,7 +1196,7 @@ public class Fachada {
 		JOptionPane.showMessageDialog(null, Precio, "Factura", JOptionPane.PLAIN_MESSAGE);
 
 		vic.setTxtCorreo("");
-		vic.setPwdContraseña("");
+		vic.setPwdContrasena("");
 
 		// recoge los botones de el panel para inhabilitarlos
 

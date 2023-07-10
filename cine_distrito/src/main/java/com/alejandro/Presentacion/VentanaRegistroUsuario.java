@@ -36,9 +36,9 @@ public class VentanaRegistroUsuario extends JPanel {
          */
 	private JTextField txtCorreo;
         /**
-         * campo de texto contraseña
+         * campo de texto contrasena
          */
-	private JTextField txtContraseña;
+	private JTextField txtContrasena;
         /**
          * campo de texto documento
          */
@@ -90,7 +90,7 @@ public class VentanaRegistroUsuario extends JPanel {
 		btnSalir.setBounds(20, 20, 60, 40);
 		btnSalir.setContentAreaFilled(false);
 		btnSalir.setBorder(BorderFactory.createLineBorder(Color.GREEN, 0, true));
-		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/exitArrow.png");
+		ImageIcon imagenSalir = new ImageIcon("./src/main/resources/img/exitArrow.png");
 
 		btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
 				btnSalir.getHeight(), Image.SCALE_SMOOTH)));
@@ -109,7 +109,7 @@ public class VentanaRegistroUsuario extends JPanel {
 		btnIngreso = new JButton();
 		btnIngreso.setBounds(280, 580, 134, 54);
 		btnIngreso.setContentAreaFilled(false);
-		ImageIcon imagenIngreso = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnRegistro.png");
+		ImageIcon imagenIngreso = new ImageIcon("./src/main/resources/img/imgBtnRegistro.png");
 		btnIngreso.setIcon(new ImageIcon(imagenIngreso.getImage().getScaledInstance(btnIngreso.getWidth(),
 				btnIngreso.getHeight(), Image.SCALE_SMOOTH)));
 
@@ -160,17 +160,17 @@ public class VentanaRegistroUsuario extends JPanel {
 
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-		JLabel lblContraseña = new JLabel();
-		lblContraseña.setText("Contraseña: ");
-		lblContraseña.setBounds(400, 310, 150, 30);
-		lblContraseña.setFont(new Font("Comic Sans MS", Font.ITALIC, 16));
+		JLabel lblContrasena = new JLabel();
+		lblContrasena.setText("Contrasena: ");
+		lblContrasena.setBounds(400, 310, 150, 30);
+		lblContrasena.setFont(new Font("Comic Sans MS", Font.ITALIC, 16));
 
 
-		txtContraseña = new JTextField();
-		txtContraseña.setBounds(400, 440, 200, 30);
-		txtContraseña.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
+		txtContrasena = new JTextField();
+		txtContrasena.setBounds(400, 440, 200, 30);
+		txtContrasena.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
 
-		pnlPrincipal.add(txtContraseña);
+		pnlPrincipal.add(txtContrasena);
 
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -229,7 +229,7 @@ public class VentanaRegistroUsuario extends JPanel {
 		pnlPrincipal.add(cmbCargo);
 
 		JLabel lblRol = new JLabel();
-		lblRol.setText("Contraseña: ");
+		lblRol.setText("Contrasena: ");
 		lblRol.setBounds(400, 410, 190, 30);
 		lblRol.setFont(new Font("Comic Sans MS", Font.ITALIC, 16));
 
@@ -298,18 +298,18 @@ public class VentanaRegistroUsuario extends JPanel {
 		return txtCorreo;
 	}
 	/**
-	 * getter texto del campo de texto de contraseña 
+	 * getter texto del campo de texto de contrasena 
 	 * @return String
 	 */
-	public String getTxtContraseña() {
-		return txtContraseña.getText();
+	public String getTxtContrasena() {
+		return txtContrasena.getText();
 	}
 	/**
-	 * getter campo de texto contraseña
+	 * getter campo de texto contrasena
 	 * @return JTextField
 	 */
-	public JTextField getFTxtContraseña() {
-		return txtContraseña;
+	public JTextField getFTxtContrasena() {
+		return txtContrasena;
 	}
 	/**
 	 * getter campo de texto documento

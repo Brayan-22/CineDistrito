@@ -11,7 +11,7 @@ public class FabricaEmpleado implements AbstractFactoryCRUD{
     private int idempleado;
     private String nombre;
     private String apellidos;
-    private String contraseña;
+    private String contrasena;
     private String telefono;
     private String fecha_inin_cargo;
     private int id_tipo_cargo;
@@ -24,17 +24,17 @@ public class FabricaEmpleado implements AbstractFactoryCRUD{
      * @param idempleado define la cedula del empleado
      * @param nombre define el nombre del empleado
      * @param apellidos  define el/los apellidos del empleado
-     * @param contraseña define la contraseña para el empleado
+     * @param contrasena define la contrasena para el empleado
      * @param telefono define el telefono del empleado
      * @param fecha_inin_cargo define la fecha en la que empezo a trabajar el empleado
      * @param id_tipo_cargo define el tipo de cargo del empleado
      * @param id_multiplex define el multiplex en el que trabaja
      */
-    public FabricaEmpleado(int idempleado,String nombre,String apellidos,String contraseña,String telefono,String fecha_inin_cargo,int id_tipo_cargo,int id_multiplex) {
+    public FabricaEmpleado(int idempleado,String nombre,String apellidos,String contrasena,String telefono,String fecha_inin_cargo,int id_tipo_cargo,int id_multiplex) {
         this.idempleado=idempleado;
         this.nombre=nombre;
         this.apellidos=apellidos;
-        this.contraseña=contraseña;
+        this.contrasena=contrasena;
         this.telefono=telefono;
         this.fecha_inin_cargo=fecha_inin_cargo;
         this.id_tipo_cargo=id_tipo_cargo;
@@ -52,11 +52,11 @@ public class FabricaEmpleado implements AbstractFactoryCRUD{
     /**
      * constructor para update empleado
      * @param codigoempleado define el codigo del empleado al cual se le actualizaran los datos
-     * @param contraseña define la nueva contraseña del empleado
+     * @param contrasena define la nueva contrasena del empleado
      */
-    public FabricaEmpleado(String codigoempleado,String contraseña) {
+    public FabricaEmpleado(String codigoempleado,String contrasena) {
         this.codigoempleado=codigoempleado;
-        this.contraseña=contraseña;
+        this.contrasena=contrasena;
     }
     
     
@@ -67,7 +67,7 @@ public class FabricaEmpleado implements AbstractFactoryCRUD{
      */
     @Override
     public Create crearRegistro() {
-        return new CreateEmpleado(idempleado, nombre, apellidos, contraseña, telefono, fecha_inin_cargo, id_tipo_cargo, id_multiplex);
+        return new CreateEmpleado(idempleado, nombre, apellidos, contrasena, telefono, fecha_inin_cargo, id_tipo_cargo, id_multiplex);
     }
     /** 
      * @return Delete
@@ -91,7 +91,7 @@ public class FabricaEmpleado implements AbstractFactoryCRUD{
      */
     @Override
     public Update updateRegistro() {
-        return new UpdateEmpleado(codigoempleado, contraseña);
+        return new UpdateEmpleado(codigoempleado, contrasena);
     }
     
     

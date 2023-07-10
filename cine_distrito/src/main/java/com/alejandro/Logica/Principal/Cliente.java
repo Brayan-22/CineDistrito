@@ -8,7 +8,7 @@ public class Cliente {
 
 	private String Nombre;
 	private String Correo;
-	private String Contraseña;
+	private String Contrasena;
 	private int Identificacion;
 	private int Puntos;
 	
@@ -16,14 +16,14 @@ public class Cliente {
 	 * Constructor cliente
 	 * @param Nombre define el nombre del cliente
 	 * @param Correo define el correo del cliente
-	 * @param Contraseña define la contraseña del cliente
+	 * @param Contrasena define la contrasena del cliente
 	 * @param Identificacion define la identificacion del cliente
 	 */
-	public Cliente(String Nombre, String Correo, String Contraseña, int Identificacion) {
+	public Cliente(String Nombre, String Correo, String Contrasena, int Identificacion) {
 		
 		this.Nombre = Nombre;
 		this.Correo = Correo;
-		this.Contraseña = Contraseña;
+		this.Contrasena = Contrasena;
 		this.Identificacion = Identificacion;
 	}
 
@@ -66,19 +66,19 @@ public class Cliente {
 	}
 
 	/**
-	 * getter contraseña
+	 * getter contrasena
 	 * @return String
 	 */
-	public String getContraseña() {
-		return Contraseña;
+	public String getContrasena() {
+		return Contrasena;
 	}
 
 	/**
-	 * setter contraseña
-	 * @param contraseña String
+	 * setter contrasena
+	 * @param contrasena String
 	 */
-	public void setContraseña(String contraseña) {
-		Contraseña = contraseña;
+	public void setContrasena(String contrasena) {
+		Contrasena = contrasena;
 	}
 
 	/**

@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
- * Panel para la ventana de recuperar contraseña
+ * Panel para la ventana de recuperar contrasena
  * @author alejandro
  * @version 1.0
  */
@@ -46,9 +46,9 @@ public class VentanaRecuperarContrasena extends JPanel {
          */
 	private String Pelicula;
         /**
-         * label contraseña
+         * label contrasena
          */
-	private JLabel lblContraseña;
+	private JLabel lblContrasena;
         /**
          * label documento
          */
@@ -74,7 +74,7 @@ public class VentanaRecuperarContrasena extends JPanel {
 		btnContinue = new JButton();
 		btnContinue.setBounds(280, 520, 134, 54);
 		btnContinue.setContentAreaFilled(false);
-		ImageIcon imagenIngreso = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnContinue.png");
+		ImageIcon imagenIngreso = new ImageIcon("./src/main/resources/img/imgBtnContinue.png");
 		btnContinue.setIcon(new ImageIcon(imagenIngreso.getImage().getScaledInstance(btnContinue.getWidth(),
 				btnContinue.getHeight(), Image.SCALE_SMOOTH)));
 
@@ -84,19 +84,19 @@ public class VentanaRecuperarContrasena extends JPanel {
 		btnSalir.setBounds(20, 20, 60, 40);
 		btnSalir.setContentAreaFilled(false);
 		btnSalir.setBorder(BorderFactory.createLineBorder(Color.GREEN, 0, true));
-		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/exitArrow.png");
+		ImageIcon imagenSalir = new ImageIcon("./src/main/resources/img/exitArrow.png");
 
 		btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
 				btnSalir.getHeight(), Image.SCALE_SMOOTH)));
 
 		pnlPrincipal.add(btnSalir);
 
-		lblContraseña = new JLabel();
-		lblContraseña.setText("Recuperar Contraseña");
-		lblContraseña.setBounds(130, 40, 500, 100);
-		lblContraseña.setFont(new Font("Comic Sans MS", Font.BOLD, 44));
+		lblContrasena = new JLabel();
+		lblContrasena.setText("Recuperar Contrasena");
+		lblContrasena.setBounds(130, 40, 500, 100);
+		lblContrasena.setFont(new Font("Comic Sans MS", Font.BOLD, 44));
 
-		pnlPrincipal.add(lblContraseña);
+		pnlPrincipal.add(lblContrasena);
 
 		JPanel pnlDocumento = new JPanel();
 		pnlDocumento.setLayout(null);

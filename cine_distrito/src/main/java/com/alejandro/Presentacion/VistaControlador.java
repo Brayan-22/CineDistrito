@@ -22,9 +22,9 @@ public class VistaControlador extends JFrame {
          */
 	private VentanaAdmin va;
         /**
-         * panel de ventana recueperar contraseña
+         * panel de ventana recueperar contrasena
          */
-	private VentanaRecuperarContrasena vrcontraseña;
+	private VentanaRecuperarContrasena vrcontrasena;
         /**
          * panel de ventana cartelera
          */
@@ -34,7 +34,7 @@ public class VistaControlador extends JFrame {
          */
 	private VentanaCompraSilla vcs;
         /**
-         * panel de ventana establecer contraseña
+         * panel de ventana establecer contrasena
          */
 	private VentanaEstablecerContrasena vec;
         /**
@@ -91,8 +91,8 @@ public class VistaControlador extends JFrame {
 		va = new VentanaAdmin();
 		this.add(va);
 
-		vrcontraseña = new VentanaRecuperarContrasena();
-		this.add(vrcontraseña);
+		vrcontrasena = new VentanaRecuperarContrasena();
+		this.add(vrcontrasena);
 
 		vc = new VentanaCartelera();
 		this.add(vc);
@@ -132,7 +132,7 @@ public class VistaControlador extends JFrame {
 		vcs.setVisible(false);
 		vec.setVisible(false);
 		vic.setVisible(false);
-		vrcontraseña.setVisible(false);
+		vrcontrasena.setVisible(false);
 		vrc.setVisible(false);
 		vru.setVisible(false);
 		vs.setVisible(false);
@@ -154,7 +154,7 @@ public class VistaControlador extends JFrame {
 
 	}
 	/**
-	 * Añade los listeners de los eventos a los paneles
+	 * Anade los listeners de los eventos a los paneles
 	 */
 	private void capturarEventos() {
 
@@ -174,7 +174,7 @@ public class VistaControlador extends JFrame {
 
 		vic.getBtnSalir().addActionListener(getControl());
 		vic.getBtnIngreso().addActionListener(getControl());
-		vic.getBtnOlvidoContraseña().addActionListener(getControl());
+		vic.getBtnOlvidoContrasena().addActionListener(getControl());
 		vic.getBtnRegistroUsuario().addActionListener(getControl());
 
 		vcs.getBtnContinue().addActionListener(getControl());
@@ -192,9 +192,9 @@ public class VistaControlador extends JFrame {
 		vrc.getCbxAutorizacion().addActionListener(getControl());
 		vrc.getTxtDocumento().addKeyListener(getControl());
 
-		vrcontraseña.getBtnContinue().addActionListener(getControl());
-		vrcontraseña.getBtnSalir().addActionListener(getControl());
-		vrcontraseña.getTxtDocumento().addKeyListener(getControl());
+		vrcontrasena.getBtnContinue().addActionListener(getControl());
+		vrcontrasena.getBtnSalir().addActionListener(getControl());
+		vrcontrasena.getTxtDocumento().addKeyListener(getControl());
 
 		vs.getBtnContinue().addActionListener(getControl());
 		vs.getBtnSalir().addActionListener(getControl());
@@ -204,7 +204,7 @@ public class VistaControlador extends JFrame {
 		vs.getTbtnImgCombo4().addActionListener(getControl());
 
 		va.getBtnAgregarEmpleado().addActionListener(getControl());
-		va.getBtnCambiarContraseña().addActionListener(getControl());
+		va.getBtnCambiarContrasena().addActionListener(getControl());
 		va.getBtnCerrarSesion().addActionListener(getControl());
 
 		vec.getBtnContinue().addActionListener(getControl());
@@ -268,12 +268,12 @@ public class VistaControlador extends JFrame {
 		return vrc;
 	}
 	/**
-	 * getter panel recuperar contraseña
+	 * getter panel recuperar contrasena
 	 * @return VentanaRecuperarContrasena
 	 */
-	public VentanaRecuperarContrasena getVentanaRecuperarContraseña() {
+	public VentanaRecuperarContrasena getVentanaRecuperarContrasena() {
 
-		return vrcontraseña;
+		return vrcontrasena;
 	}
 	/**
 	 * getter panel de snacks
@@ -290,10 +290,10 @@ public class VistaControlador extends JFrame {
 		return va;
 	}
 	/**
-	 * getter panel establecer contraseña
+	 * getter panel establecer contrasena
 	 * @return VentanaEstablecerContrasena
 	 */
-	public VentanaEstablecerContrasena getVentanaEstablecerContraseña() {
+	public VentanaEstablecerContrasena getVentanaEstablecerContrasena() {
 		return vec;
 	}
 	/**

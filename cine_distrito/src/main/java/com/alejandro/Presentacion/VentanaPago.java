@@ -55,7 +55,7 @@ public class VentanaPago extends JPanel {
 		btnFinalizar.setBounds(200, 550, 266, 59);
 		btnFinalizar.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 		btnFinalizar.setContentAreaFilled(false);
-		ImageIcon imagenIngreso = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnFinalizarCompra.png");
+		ImageIcon imagenIngreso = new ImageIcon("./src/main/resources/img/imgBtnFinalizarCompra.png");
 		btnFinalizar.setIcon(new ImageIcon(imagenIngreso.getImage().getScaledInstance(btnFinalizar.getWidth(),
 				btnFinalizar.getHeight(), Image.SCALE_SMOOTH)));
 		pnlPrincipal.add(btnFinalizar);
@@ -64,7 +64,7 @@ public class VentanaPago extends JPanel {
 		btnSalir.setBounds(20, 20, 60, 40);
 		btnSalir.setContentAreaFilled(false);
 		btnSalir.setBorder(BorderFactory.createLineBorder(Color.GREEN, 0, true));
-		ImageIcon imagenSalir = new ImageIcon("cine_distrito/src/main/resources/img/exitArrow.png");
+		ImageIcon imagenSalir = new ImageIcon("./src/main/resources/img/exitArrow.png");
 
 		btnSalir.setIcon(new ImageIcon(imagenSalir.getImage().getScaledInstance(btnSalir.getWidth(),
 				btnSalir.getHeight(), Image.SCALE_SMOOTH)));
@@ -75,7 +75,7 @@ public class VentanaPago extends JPanel {
 		tbtnPaypal.setBounds(269, 250, 152, 59);
 		tbtnPaypal.setName("PayPal");
 		tbtnPaypal.setContentAreaFilled(false);
-		ImageIcon Paypal = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnPypal.png");
+		ImageIcon Paypal = new ImageIcon("./src/main/resources/img/imgBtnPypal.png");
 		tbtnPaypal.setIcon(new ImageIcon(Paypal.getImage().getScaledInstance(tbtnPaypal.getWidth(),
 				tbtnPaypal.getHeight(), Image.SCALE_SMOOTH)));
 
@@ -85,7 +85,7 @@ public class VentanaPago extends JPanel {
 		tbtnBitcoin.setBounds(269, 400, 152, 59);
 		tbtnBitcoin.setName("BitCoin");
 		tbtnBitcoin.setContentAreaFilled(false);
-		ImageIcon Bitcoin = new ImageIcon("cine_distrito/src/main/resources/img/imgBtnBitcoin.png");
+		ImageIcon Bitcoin = new ImageIcon("./src/main/resources/img/imgBtnBitcoin.png");
 		tbtnBitcoin.setIcon(new ImageIcon(Bitcoin.getImage().getScaledInstance(tbtnBitcoin.getWidth(),
 				tbtnBitcoin.getHeight(), Image.SCALE_SMOOTH)));
 		pnlPrincipal.add(tbtnBitcoin);

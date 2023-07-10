@@ -36,7 +36,7 @@ public class ReadCliente implements Read{
     @Override
     public ArrayList operacionCrud() {
         array=new ArrayList();
-        String sql="select idcliente,correo,contraseña,nombre from cliente where correo='"+correo+"';";
+        String sql="select idcliente,correo,contrasena,nombre from cliente where correo='"+correo+"';";
         conexion=singletonConexion.getConexion();
         try {
             conexion.Conectar();
